@@ -11,10 +11,16 @@ import styled, {css} from 'styled-components'
 const Logo = css`
 	width: 600px;
 `
+const Testing = styled.div`
+	width: 100%;
+	height: 500px;
+	background-color: ${({theme}) => theme.colorSecondary};
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+		<Testing />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -23,6 +29,7 @@ const IndexPage = () => (
     </div>
     <Link to="/page-2/">Go to page 2</Link>
 		<Icon name="logo" styles={Logo}></Icon>
+
   </Layout>
 )
 
