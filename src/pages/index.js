@@ -14,7 +14,7 @@ const Logo = css`
 const Testing = styled.div`
 	width: 100%;
 	height: 500px;
-	background-color: ${({theme}) => theme.colorSecondary};
+	background-color: ${({theme}) => theme.colorDarkGrey};
 `
 
 const IndexPage = () => (
