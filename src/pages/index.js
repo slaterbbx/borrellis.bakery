@@ -5,6 +5,13 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+import Icon from '../util/icons/Icons'
+import styled, {css} from 'styled-components'
+
+const Logo = css`
+	width: 600px;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -15,6 +22,7 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
+		<Icon name="logo" styles={Logo}></Icon>
   </Layout>
 )
 
