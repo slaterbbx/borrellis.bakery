@@ -5,10 +5,10 @@ module.exports = {
     author: `@slaterbbx`,
   },
   plugins: [
-		{
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-				// Use this during production to shorten class names in styled-components
+        // Use this during production to shorten class names in styled-components
         // displayName: false
       },
     },
