@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import {otBold} from './base-fonts';
 
 const GlobalStyle = createGlobalStyle`
 		@import url("https://use.typekit.net/tui1rye.css");
@@ -21,14 +20,14 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({theme}) => theme.colorPrimary};
     font-family: ${({theme}) => theme.fontSecondary};
     font-size: 2rem;
-    color: ${({theme}) => theme.colorPrimaryAccent};
+    color: ${({theme}) => theme.colorDarkGrey};
 
     a {
-        color: ${({theme}) => theme.colorTertiary};
+        color: ${({theme}) => theme.colorDarkGrey};
 
         :active,
         :visited{
-            color: ${({theme}) => theme.colorTertiary};
+            color: ${({theme}) => theme.colorDarkerGrey};
         }
     }
   
