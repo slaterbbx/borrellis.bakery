@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components/macro"
 
+import Logo from "./svgs/Logo"
 import About from "./svgs/About"
 import Biscuits from "./svgs/Biscuits"
 import Bread from "./svgs/Bread"
@@ -111,9 +112,9 @@ const svgIcon = props => {
       break
     case "Home":
       PropsName = Home
-      break
-    default:
-      PropsName = Bug
+			break
+		default:
+			PropsName = About
   }
 
   if (props.viewbox) {
