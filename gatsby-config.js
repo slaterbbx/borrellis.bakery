@@ -5,6 +5,13 @@ module.exports = {
     author: `@slaterbbx`,
   },
   plugins: [
+		{
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+				// Use this during production to shorten class names in styled-components
+        // displayName: false
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
