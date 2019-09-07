@@ -6,12 +6,12 @@ export const Logo = css`
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  max-height: 90%;
+  max-height: 85vh;
 
   ${media(
     [null, "min-750"],
     css`
-      max-height: 70%;
+      max-height: 75vh;
     `
   )}
 
