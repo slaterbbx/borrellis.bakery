@@ -1,15 +1,14 @@
-
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components"
 
 const SharedStyles = css`
   position: relative;
   width: 100%;
   height: 100vh;
-	padding: 2rem;
+  padding: 2rem;
 `
 const InnerGradiantOn = styled.div`
-	${SharedStyles}
-	background: linear-gradient(
+  ${SharedStyles}
+  background: linear-gradient(
     rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0) 50%,
     rgba(0, 0, 0, 0.6) 80%
@@ -19,19 +18,19 @@ const InnerGradiantOn = styled.div`
   );
 `
 const InnerGradiantOff = styled.div`
-	${SharedStyles}
-	background: linear-gradient(
+  ${SharedStyles}
+  background: linear-gradient(
     rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0) 50%,
     rgba(0, 0, 0, 0.6) 80%
   );
 `
 // checks if innerGradiant props is set to true or anything else. Sets css based on desired output.
-const styleChecker = (isOn) => {
-	if (isOn === true){
-		return InnerGradiantOn;
-	} 
-	return InnerGradiantOff;
+const styleChecker = isOn => {
+  if (isOn === true) {
+    return InnerGradiantOn
+  }
+  return InnerGradiantOff
 }
 
-export default styleChecker;
+export default styleChecker
