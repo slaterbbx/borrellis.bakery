@@ -3,21 +3,10 @@ import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
+import StyleChecker from './pageWrapper-style'
 
-const PageWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 2rem;
 
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.6) 80%
-  );
-`
-
-const BackgroundSection = ({ className, src, children }) => {
+const BackgroundSection = ({ className, src, innerGradiant, children }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { internal: { mediaType: { regex: "images/" } } }) {
@@ -38,7 +27,10 @@ const BackgroundSection = ({ className, src, children }) => {
   const match = useMemo(
     () => data.allFile.edges.find(({ node }) => src === node.relativePath),
     [data, src]
-  )
+	)
+	
+	// sends true or false to the pageWrapper-styles.js to determine what version to use, 1 or 2 gradiants.
+	let CockPit = StyleChecker(innerGradiant);
 
   return (
     <BackgroundImage
@@ -47,7 +39,9 @@ const BackgroundSection = ({ className, src, children }) => {
       fluid={match.node.childImageSharp.fluid}
       backgroundColor={`#fff`}
     >
-      <PageWrapper>{children}</PageWrapper>
+			<CockPit>
+				{children}
+			</CockPit>
     </BackgroundImage>
   )
 }
