@@ -11,14 +11,18 @@ const buttonColor = css`
   background-color: ${({ theme }) => theme.colorWhite};
 `
 
-export const NavButton = styled.div`
-
+export const NavButtonWrapper = styled.div`
 	position: absolute;
 	top: 2rem;
 	right: 2rem;
+	display: flex;
+	flex-direction: column;
+`
+
+export const NavButton = styled.div`
+
 	background-color: ${({ theme }) => theme.colorBrandRed};
 	border-radius: 100%;
-
 	box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .2);
 
   .button {
@@ -126,4 +130,23 @@ export const NavButton = styled.div`
         transition: all 0.5s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
       }
     `}
+`
+
+export const HomeButton = css`
+	margin-top: 1rem;
+	width: 7rem;
+
+	${media(
+    ['max-800'],
+    css`
+    	width: 6rem;
+    `
+  )}
+
+	padding: 1rem;
+	align-self: center;
+	color: ${({theme}) => theme.colorWhite};
+	cursor: pointer;
+
+	filter: drop-shadow(0 .5rem 1rem rgb(0, 0, 0, .2));
 `
