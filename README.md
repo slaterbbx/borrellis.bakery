@@ -1,11 +1,11 @@
 ## Borrelli's Bakery Website
 
 ## 🧐Client Website
-![alt text][./gitImages/image1.jpg]
-![alt text][./gitImages/image2.jpg]
-![alt text][./gitImages/image3.jpg]
-![alt text][./gitImages/image4.jpg]
-![alt text][./gitImages/image5.jpg]
+![Gatsby Website 1](gitImages/image1.jpg)
+![Gatsby Website 2](gitImages/image2.jpg)
+![Gatsby Website 3](gitImages/image3.jpg)
+![Gatsby Website 4](gitImages/image4.jpg)
+![Gatsby Website 5](gitImages/image5.jpg)
 
 ## 🚀  View online design
 View design files here: https://www.figma.com/file/FD0kSXJ4qs0LyWuUXHYfjJ6m/Borrelli-s-Bakery?node-id=0%3A1
