@@ -5,7 +5,7 @@ module.exports = {
     author: `@slaterbbx`,
   },
   plugins: [
-		`gatsby-plugin-layout`,
+    `gatsby-plugin-layout`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

@@ -112,9 +112,9 @@ const svgIcon = props => {
       break
     case "Home":
       PropsName = Home
-			break
-		default:
-			PropsName = About
+      break
+    default:
+      PropsName = About
   }
 
   if (props.viewbox) {
