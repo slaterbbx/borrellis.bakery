@@ -5,40 +5,20 @@ export const Logo = css`
 	position: relative;
 	display: block;
 	margin: 0 auto;
-	max-width: 90rem;
+	max-width: 100%;
+	max-height: 90%;
 
 	${media(
-    [null, "max-840"],
+    [null, 'min-750'],
     css`
-      max-height: 60rem;
+      max-height: 70%;
     `
   )}
 
-	${media(
-    [null, "max-740"],
+${media(
+    ['min-400'],
     css`
-      max-height: 50rem;
-    `
-  )}
-
-	${media(
-    [null, "max-540"],
-    css`
-      max-height: 35rem;
-    `
-  )}
-
-	${media(
-    [null, "max-400"],
-    css`
-      max-height: 30rem;
-    `
-  )}
-
-	${media(
-    [null, "max-340"],
-    css`
-      max-height: 25rem;
+      max-width: 90%;
     `
   )}
 `
