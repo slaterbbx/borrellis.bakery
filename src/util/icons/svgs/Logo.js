@@ -2,7 +2,7 @@ import React from "react"
 
 const path = _ => (
   <>
-    <g clip-path="url(#clip0)">
+    <g clipPath="url(#clip0)">
       <path
         d="M264.579 171.235C261.915 171.141 259.283 171.047 256.62 170.922L251.168 170.702L250.228 170.671C247.157 170.546 243.961 170.421 240.828 170.327C240.859 169.982 240.891 169.606 240.922 169.231C241.11 167.32 241.298 165.347 241.298 163.374C241.298 159.366 240.953 155.765 240.233 152.383C240.107 151.788 239.982 151.193 239.857 150.598C239.481 148.781 239.073 146.934 238.603 145.086C238.102 143.144 237.413 141.266 236.755 139.449C236.473 138.698 236.191 137.915 235.94 137.132C235 134.376 233.747 131.464 232.18 128.238C231.741 127.361 231.177 126.578 230.645 125.858C230.331 125.42 230.018 125.013 229.767 124.606C227.229 120.628 224.221 117.058 221.37 113.77C220.461 112.706 219.427 111.829 218.393 110.983C217.861 110.545 217.359 110.106 216.889 109.668C213.819 106.849 210.435 104.407 207.145 102.089L206.8 101.839C205.578 100.962 204.262 100.304 203.009 99.6469C202.194 99.2084 201.411 98.8326 200.659 98.3629C198.434 97.0476 196.053 96.2334 193.765 95.4819C192.919 95.2 192.042 94.9182 191.227 94.605C188.501 93.6029 185.681 92.9453 182.924 92.319C181.577 92.0058 180.198 91.6926 178.851 91.3482C177.597 91.0037 176.344 90.9097 175.153 90.7845C174.527 90.7219 173.963 90.6592 173.399 90.5966C172.615 90.4713 171.801 90.3774 170.923 90.2834L171.017 89.1561C171.205 86.9326 171.362 84.6153 171.519 82.3292C171.581 81.1392 171.707 79.9492 171.801 78.7592C171.989 76.5358 172.177 74.2184 172.239 71.9011C172.271 70.7424 172.396 69.5837 172.553 68.3624C172.584 68.0805 172.615 67.7674 172.647 67.4855C172.709 66.9218 172.709 66.3895 172.741 65.8571C172.741 65.5126 172.741 65.1995 172.772 64.8863C174.495 65.1368 176.187 65.1995 177.691 65.2308C181.295 65.2934 184.741 66.045 188.376 66.7966L188.783 66.8905C190.663 67.2976 192.481 67.83 194.392 68.425C194.799 68.5503 195.238 68.6755 195.645 68.8008C198.622 69.709 201.599 70.8363 204.481 71.9324C205.515 72.3395 206.549 72.7153 207.583 73.1224C208.085 73.3103 208.617 73.5608 209.15 73.8426C209.589 74.0619 210.027 74.2811 210.497 74.5003C215.166 76.5358 219.553 79.2603 223.25 81.6403C224.441 82.4232 225.569 83.3313 226.728 84.3334C227.261 84.7718 227.793 85.2416 228.326 85.68C233.841 90.0955 238.603 95.2 242.551 99.6155C244.964 102.34 247.126 105.346 249.225 108.29L249.57 108.76C251.387 111.296 252.86 114.083 254.333 116.808C254.959 117.967 255.586 119.188 256.275 120.378C256.902 121.474 257.247 122.727 257.654 124.042C257.842 124.668 258.03 125.294 258.249 125.952C258.813 127.612 259.471 129.585 260.004 131.589C260.787 134.501 261.539 137.664 262.354 141.297C262.855 143.52 263.231 145.838 263.607 148.061C263.827 149.47 264.077 150.911 264.359 152.351C264.391 152.477 264.391 152.696 264.391 152.884C264.391 153.166 264.391 153.51 264.453 153.886C264.547 154.606 264.579 155.326 264.579 156.109C264.579 156.673 264.61 157.268 264.641 157.894C264.829 160.368 264.798 162.936 264.767 165.41C264.735 166.631 264.735 167.853 264.735 169.105C264.735 169.544 264.735 169.982 264.735 170.421C264.579 170.64 264.579 170.922 264.579 171.235Z"
         fill="url(#paint0_radial)"
@@ -317,13 +317,13 @@ const path = _ => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(180.283 150.271) scale(88.6198 88.3488)"
       >
-        <stop stop-color="#C93831" />
-        <stop offset="0.1167" stop-color="#C43730" />
-        <stop offset="0.2589" stop-color="#B5322C" />
-        <stop offset="0.4143" stop-color="#9C2C26" />
-        <stop offset="0.5793" stop-color="#7A221E" />
-        <stop offset="0.7518" stop-color="#4D1613" />
-        <stop offset="0.928" stop-color="#180706" />
+        <stop stopColor="#C93831" />
+        <stop offset="0.1167" stopColor="#C43730" />
+        <stop offset="0.2589" stopColor="#B5322C" />
+        <stop offset="0.4143" stopColor="#9C2C26" />
+        <stop offset="0.5793" stopColor="#7A221E" />
+        <stop offset="0.7518" stopColor="#4D1613" />
+        <stop offset="0.928" stopColor="#180706" />
         <stop offset="1" />
       </radialGradient>
       <linearGradient
@@ -334,19 +334,19 @@ const path = _ => (
         y2="118.179"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#F18B3B" />
-        <stop offset="0.0246495" stop-color="#EE843A" />
-        <stop offset="0.1559" stop-color="#DE6336" />
-        <stop offset="0.2816" stop-color="#D24B33" />
-        <stop offset="0.3983" stop-color="#CB3D32" />
-        <stop offset="0.4972" stop-color="#C93831" />
-        <stop offset="0.5332" stop-color="#A92F29" />
-        <stop offset="0.5898" stop-color="#7C231E" />
-        <stop offset="0.6488" stop-color="#561815" />
-        <stop offset="0.7096" stop-color="#370F0D" />
-        <stop offset="0.7729" stop-color="#1F0907" />
-        <stop offset="0.8395" stop-color="#0D0403" />
-        <stop offset="0.9117" stop-color="#030101" />
+        <stop stopColor="#F18B3B" />
+        <stop offset="0.0246495" stopColor="#EE843A" />
+        <stop offset="0.1559" stopColor="#DE6336" />
+        <stop offset="0.2816" stopColor="#D24B33" />
+        <stop offset="0.3983" stopColor="#CB3D32" />
+        <stop offset="0.4972" stopColor="#C93831" />
+        <stop offset="0.5332" stopColor="#A92F29" />
+        <stop offset="0.5898" stopColor="#7C231E" />
+        <stop offset="0.6488" stopColor="#561815" />
+        <stop offset="0.7096" stopColor="#370F0D" />
+        <stop offset="0.7729" stopColor="#1F0907" />
+        <stop offset="0.8395" stopColor="#0D0403" />
+        <stop offset="0.9117" stopColor="#030101" />
         <stop offset="1" />
       </linearGradient>
       <radialGradient
@@ -358,8 +358,8 @@ const path = _ => (
         gradientTransform="translate(169.58 162.434) rotate(12.6916) scale(32.195 14.3334)"
       >
         <stop offset="0.00479289" />
-        <stop offset="0.6061" stop-opacity="0.1652" />
-        <stop offset="1" stop-opacity="0" />
+        <stop offset="0.6061" stopOpacity="0.1652" />
+        <stop offset="1" stopOpacity="0" />
       </radialGradient>
       <linearGradient
         id="paint3_linear"
@@ -369,9 +369,9 @@ const path = _ => (
         y2="237.01"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-opacity="0.5" />
-        <stop offset="0.5056" stop-opacity="0" />
-        <stop offset="1" stop-opacity="0.2" />
+        <stop stopOpacity="0.5" />
+        <stop offset="0.5056" stopOpacity="0" />
+        <stop offset="1" stopOpacity="0.2" />
       </linearGradient>
       <linearGradient
         id="paint4_linear"
@@ -381,9 +381,9 @@ const path = _ => (
         y2="199.3"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-opacity="0.5" />
-        <stop offset="0.5056" stop-opacity="0" />
-        <stop offset="1" stop-opacity="0.2" />
+        <stop stopOpacity="0.5" />
+        <stop offset="0.5056" stopOpacity="0" />
+        <stop offset="1" stopOpacity="0.2" />
       </linearGradient>
       <linearGradient
         id="paint5_linear"
@@ -393,9 +393,9 @@ const path = _ => (
         y2="199.301"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-opacity="0.5" />
-        <stop offset="0.5056" stop-opacity="0" />
-        <stop offset="1" stop-opacity="0.2" />
+        <stop stopOpacity="0.5" />
+        <stop offset="0.5056" stopOpacity="0" />
+        <stop offset="1" stopOpacity="0.2" />
       </linearGradient>
       <linearGradient
         id="paint6_linear"
@@ -405,9 +405,9 @@ const path = _ => (
         y2="237.01"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-opacity="0.5" />
-        <stop offset="0.5056" stop-opacity="0" />
-        <stop offset="1" stop-opacity="0.2" />
+        <stop stopOpacity="0.5" />
+        <stop offset="0.5056" stopOpacity="0" />
+        <stop offset="1" stopOpacity="0.2" />
       </linearGradient>
       <clipPath id="clip0">
         <rect width="282" height="238" fill="white" />
