@@ -1,22 +1,40 @@
 import styled, { css } from "styled-components"
+import media from '../../util/mediaQuery'
 
 const buttonLineSize = css`
-  width: 3rem;
-  height: 0.4rem;
-  border-radius: 2px;
+  width: 4rem;
+  height: 0.5rem;
+  border-radius: 2rem;
 `
 
 const buttonColor = css`
-  background-color: ${({ theme }) => theme.colorBrandRed};
+  background-color: ${({ theme }) => theme.colorWhite};
 `
 
 export const NavButton = styled.div`
+
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	background-color: ${({ theme }) => theme.colorBrandRed};
+	border-radius: 100%;
+
+	box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .2);
+
   .button {
     display: block;
     position: relative;
-    height: 5rem;
-    width: 5rem;
+    height: 8rem;
+    width: 8rem;
     cursor: pointer;
+
+		${media(
+    ['max-800'],
+    css`
+      height: 7rem;
+    	width: 7rem;
+    `
+  )}
   }
 
   .icon-x {
@@ -66,11 +84,11 @@ export const NavButton = styled.div`
       }
 
       ::before {
-        transform: translateY(-1rem);
+        transform: translateY(-1.1rem);
       }
 
       ::after {
-        transform: translateY(1rem);
+        transform: translateY(1.1rem);
       }
     }
   }
