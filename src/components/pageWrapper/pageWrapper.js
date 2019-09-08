@@ -43,11 +43,11 @@ const BackgroundSection = ({ className, src, innerGradiant, children }) => {
   )
 }
 
-const StyledBackgroundSection = styled(BackgroundSection)`
+const pageWrapper = styled(BackgroundSection)`
   width: 100%;
   height: 100vh;
   background-position: center;
   background-size: cover;
 `
 
-export default StyledBackgroundSection
+export default pageWrapper
