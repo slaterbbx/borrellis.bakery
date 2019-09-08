@@ -8,6 +8,8 @@ export const Logo = css`
   max-width: 100%;
   max-height: 85vh;
 
+	z-index: 1;
+
   ${media(
     [null, "min-750"],
     css`

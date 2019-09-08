@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 
 import Icon from "../util/icons/icons"
 import * as Styles from "./index-styles"
-
 import PageWrapper from "../components/pageWrapper/pageWrapper"
 import Navigation from '../components/navigation/navigation'
 
