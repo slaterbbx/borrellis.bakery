@@ -56,61 +56,61 @@ const svgIcon = props => {
       PropsName = Logo
       viewBox = "0 0 282 238"
       break
-    case "About":
+    case "about":
       PropsName = About
       break
-    case "Biscuits":
+    case "biscuits":
       PropsName = Biscuits
       break
-    case "Bread":
+    case "bread":
       PropsName = Bread
       break
-    case "Catering":
+    case "catering":
       PropsName = Catering
       break
-    case "Cheesecake":
+    case "cheesecake":
       PropsName = Cheesecake
       break
-    case "Contact":
+    case "contact":
       PropsName = Contact
       break
-    case "Cupcake":
+    case "cupcake":
       PropsName = Cupcake
       break
-    case "Facebook":
+    case "facebook":
       PropsName = Facebook
       break
-    case "Instagram":
+    case "instagram":
       PropsName = Instagram
       break
-    case "Mapmarker":
+    case "mapmarker":
       PropsName = Mapmarker
       break
-    case "Menu":
+    case "menu":
       PropsName = Menu
       break
-    case "Pastries":
+    case "pastries":
       PropsName = Pastries
       break
-    case "Pie":
+    case "pie":
       PropsName = Pie
       break
-    case "PizzaCutter":
+    case "pizzaCutter":
       PropsName = PizzaCutter
       break
-    case "Seasonal":
+    case "seasonal":
       PropsName = Seasonal
       break
-    case "Specialty":
+    case "specialty":
       PropsName = Specialty
       break
-    case "Wholesale":
+    case "wholesale":
       PropsName = Wholesale
       break
-    case "Yelp":
+    case "yelp":
       PropsName = Yelp
       break
-    case "Home":
+    case "home":
       PropsName = Home
       break
     default:
