@@ -106,11 +106,13 @@ export const NavButton = styled.div`
       .icon-x::before {
         transform: rotate(-135deg) scale(1.1);
         transition-delay: 0.2s;
+				box-shadow: 0 .4rem .4rem rgb(0, 0, 0, .1);
       }
 
       .icon-x::after {
         transform: rotate(135deg) scale(1.1);
         transition-delay: 0.2s;
+				box-shadow: 0 -.3rem .4rem rgb(0, 0, 0, .1);
       }
 
       .icon-x--lines::before,

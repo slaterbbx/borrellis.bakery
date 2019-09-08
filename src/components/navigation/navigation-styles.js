@@ -1,10 +1,6 @@
-import React, { useState } from 'react'
 import styled, {css} from 'styled-components'
-import NavButton from './navigationButton'
-import Icon from '../../util/icons/icons'
-// import Styles from './navigation-styles'
 
-const MenuWrapper = styled.div`
+export const MenuWrapper = styled.div`
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -40,7 +36,7 @@ const MenuWrapper = styled.div`
 		}
 `
 
-const BreadIcon = css`
+export const BreadIcon = css`
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -50,29 +46,3 @@ const BreadIcon = css`
 	opacity: .03;
 	transform: translate(-50%, -43%) rotate(90deg);
 `
-
-const NavMenu = () => {
-	
-	const buttonState = useState(true);
-
-	const buttonChangeHandler = () => {
-			buttonState[1](!buttonState[0]);
-	};
-
-	return (
-		<>
-			<NavButton active={!buttonState[0]}
-			inactive={buttonState[0]}
-			clicked={buttonChangeHandler}/>
-
-			<MenuWrapper active={!buttonState[0]}
-			inactive={buttonState[0]}>
-				<div className="innerWrapper">
-					<Icon name="bread" styles={BreadIcon} />
-				</div>
-			</MenuWrapper>
-		</>
-	)
-}
-
-export default NavMenu
