@@ -1,9 +1,34 @@
-import React, { useState } from "react"
-import * as Styles from "./navigation-styles"
-import Icon from '../../util/icons/icons'
+import React, { useState } from 'react'
+import styled, {css} from 'styled-components'
+import NavButton from './navigationButton'
 
-const Navigation = () => {
+const MenuWrapper = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: ${({theme}) => theme.colorBrandRed};
+	width: 100%;
+	height: 100%;
 
+	z-index: 2;
+
+	${({ active }) =>
+    active &&
+		css`
+			transition: .5s cubic-bezier(.25,0,.01,.99);
+      transform: translateY(0);
+    `}
+
+  ${({ inactive }) =>
+    inactive &&
+		css`
+			transition: .5s cubic-bezier(.25,0,.01,.99);
+			transform: translateY(100%);
+    `}
+`
+
+const NavMenu = () => {
+	
 	const buttonState = useState(true);
 
 	const buttonChangeHandler = () => {
@@ -11,20 +36,15 @@ const Navigation = () => {
 	};
 
 	return (
+		<>
+			<NavButton active={!buttonState[0]}
+			inactive={buttonState[0]}
+			clicked={buttonChangeHandler}/>
 
-		// Make nacigation "backdrop" wrapper element for the background to the nav menu
-		// set to 100% width / 100vh and transform off page.
-
-		<Styles.NavButtonWrapper>
-			<Styles.NavButton active={!buttonState[0]} inactive={buttonState[0]}>
-				<div className="button" onClick={buttonChangeHandler}>
-					<span className="icon-x"></span>
-					<span className="icon-x--lines"></span>
-				</div>
-			</Styles.NavButton>
-			<Icon name="about" styles={Styles.HomeButton}></Icon>
-		</Styles.NavButtonWrapper>
+			<MenuWrapper active={!buttonState[0]}
+			inactive={buttonState[0]}/>
+		</>
 	)
 }
 
-export default Navigation;
+export default NavMenu
