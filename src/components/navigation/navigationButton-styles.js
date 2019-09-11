@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import media from '../../util/mediaQuery'
+import media from "../../util/mediaQuery"
 
 const buttonLineSize = css`
   width: 4rem;
@@ -12,19 +12,18 @@ const buttonColor = css`
 `
 
 export const NavButtonWrapper = styled.div`
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
-	display: flex;
-	flex-direction: column;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
 `
 
 export const NavButton = styled.div`
-
-	position: relative;
-	background-color: ${({ theme }) => theme.colorBrandRed};
-	border-radius: 100%;
-	box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .2);
+  position: relative;
+  background-color: ${({ theme }) => theme.colorBrandRed};
+  border-radius: 100%;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
 
   .button {
     display: block;
@@ -33,15 +32,15 @@ export const NavButton = styled.div`
     width: 8rem;
     cursor: pointer;
 
-		z-index: 3;
+    z-index: 3;
 
-		${media(
-    ['max-800'],
-    css`
-      height: 7rem;
-    	width: 7rem;
-    `
-  )}
+    ${media(
+      ["max-800"],
+      css`
+        height: 7rem;
+        width: 7rem;
+      `
+    )}
   }
 
   .icon-x {
@@ -106,13 +105,13 @@ export const NavButton = styled.div`
       .icon-x::before {
         transform: rotate(-135deg) scale(1.1);
         transition-delay: 0.2s;
-				box-shadow: 0 .4rem .4rem rgb(0, 0, 0, .1);
+        box-shadow: 0 0.4rem 0.4rem rgb(0, 0, 0, 0.1);
       }
 
       .icon-x::after {
         transform: rotate(135deg) scale(1.1);
         transition-delay: 0.2s;
-				box-shadow: 0 -.3rem .4rem rgb(0, 0, 0, .1);
+        box-shadow: 0 -0.3rem 0.4rem rgb(0, 0, 0, 0.1);
       }
 
       .icon-x--lines::before,
@@ -138,18 +137,18 @@ export const NavButton = styled.div`
 `
 
 export const HomeButton = css`
-	margin-top: 1rem;
-	width: 7rem;
-	padding: 1rem;
-	align-self: center;
-	color: ${({theme}) => theme.colorWhite};
-	cursor: pointer;
-	filter: drop-shadow(0 .5rem 1rem rgb(0, 0, 0, .2));
+  margin-top: 1rem;
+  width: 7rem;
+  padding: 1rem;
+  align-self: center;
+  color: ${({ theme }) => theme.colorWhite};
+  cursor: pointer;
+  filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
 
-	${media(
-    ['max-800'],
+  ${media(
+    ["max-800"],
     css`
-    	width: 6rem;
+      width: 6rem;
     `
   )}
 `
