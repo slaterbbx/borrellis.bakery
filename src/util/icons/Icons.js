@@ -24,15 +24,15 @@ import Home from "./svgs/home"
 
 const svgIcon = props => {
   let viewBox, PropsName, propsStyles
-  viewBox = "0 0 32 32"
+  viewBox = "0 0 42 32"
 
-  if (
-    props.name === "biscuites" ||
-    props.name === "pastries" ||
-    props.name === "pie"
-  ) {
-    viewBox = "0 0 64 32"
-  }
+  // if (
+  //   props.name === "biscuites" ||
+  //   props.name === "pastries" ||
+  // 	props.name === "pie"
+  // ) {
+  //   viewBox = "0 0 64 32"
+  // }
 
   if (props.styles) {
     propsStyles = css`
