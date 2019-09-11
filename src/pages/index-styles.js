@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components"
-import media from "../util/mediaQuery"
 
 export const Logo = css`
   position: relative;
@@ -8,21 +7,7 @@ export const Logo = css`
   max-width: 100%;
   max-height: 85vh;
 
-	z-index: 1;
-
-  ${media(
-    [null, "min-750"],
-    css`
-      max-height: 75vh;
-    `
-  )}
-
-  ${media(
-    ["min-400"],
-    css`
-      max-width: 90%;
-    `
-  )}
+  z-index: 1;
 `
 
 export const SudoTable = styled.div`
