@@ -4,7 +4,7 @@ import Icon from "../../util/icons/icons"
 import * as Styles from "./navigation-styles"
 import MenuLinks from "./menuLinks/menuLinks"
 
-import Image from '../image'
+import SlideShow from '../slideshow/slideShow'
 
 const NavMenu = () => {
   const menuState = useState(false)
@@ -25,9 +25,7 @@ const NavMenu = () => {
         <div className="innerWrapper">
           <Icon name="bread" styles={Styles.BreadIcon} />
           <MenuLinks />
-					<Styles.ImageStyle>
-						<Image alt="Borrelli's Bakery" src="bakery.jpg" />
-					</Styles.ImageStyle>
+					<SlideShow />
         </div>
       </Styles.MenuWrapper>
     </>

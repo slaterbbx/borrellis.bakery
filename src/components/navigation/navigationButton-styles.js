@@ -27,7 +27,7 @@ export const NavButton = styled.div`
   background-color: ${({ theme }) => theme.colorBrandRed};
   border-radius: 100%;
   box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
-	transition: all .4s ease; 
+	transition: all .5s ease; 
 
 	z-index: 3;
 
@@ -110,11 +110,13 @@ export const NavButton = styled.div`
       .icon-x::before {
         transform: rotate(-135deg) scale(1.1);
 				${xColor2};
+				transition-delay: .5s;
       }
 
       .icon-x::after {
         transform: rotate(135deg) scale(1.1);
 				${xColor2};
+				transition-delay: .5s;
       }
 
       .icon-x--lines::before,
@@ -131,12 +133,14 @@ export const NavButton = styled.div`
       .icon-x::after {
         transition: transform 0.4s;
 				${xColor1};
+				transition-delay: .5s;
       }
 
       .icon-x--lines::before,
       .icon-x--lines::after {
         transition: all 0.5s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 				${xColor1};
+				transition-delay: .5s;
       }
     `}
 `

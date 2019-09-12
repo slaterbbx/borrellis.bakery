@@ -104,12 +104,15 @@ export const Wrapper = styled.nav`
 export const LinkIcon = css`
   width: 2rem;
   margin-left: 1rem;
+	
+	&:last-child{
+		margin-right: 1rem;
+	}
 
 	${media(
 		["min-350"],
 		css`
 			width: 3rem;
-  		margin-left: 1rem;
 		`
 	)}
 
@@ -118,6 +121,10 @@ export const LinkIcon = css`
 		css`
 			width: 4.5rem;
   		margin-left: 2rem;
+
+			&:last-child{
+				margin-right: 1rem;
+			}
 		`
 	)}
 
@@ -134,6 +141,10 @@ export const LinkIcon = css`
 		css`
 			width: 8rem;
   		margin-left: 4rem;
+
+			&:last-child{
+				margin-right: 3rem;
+			}
 		`
 	)}
 

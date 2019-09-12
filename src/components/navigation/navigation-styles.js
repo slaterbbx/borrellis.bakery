@@ -53,7 +53,8 @@ export const ImageStyle = styled.div`
 	left: 0;
 	transform: rotate(-20deg);
 	width: 60%;
-	border: solid 6rem white;
+	height: 60%;
+	/* border: solid 6rem white; */
 	box-shadow: 2rem 2rem 10rem rgb(0,0,0,.2);
 
 	z-index: 5;
