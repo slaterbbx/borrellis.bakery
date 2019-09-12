@@ -4,25 +4,30 @@ import Icon from "../../util/icons/icons"
 import * as Styles from "./navigation-styles"
 import MenuLinks from "./menuLinks/menuLinks"
 
+import Image from '../image'
+
 const NavMenu = () => {
-  const buttonState = useState(true)
+  const menuState = useState(false)
 
   const buttonChangeHandler = () => {
-    buttonState[1](!buttonState[0])
+    menuState[1](!menuState[0])
   }
 
   return (
     <>
       <NavButton
-        active={!buttonState[0]}
-        inactive={buttonState[0]}
+        active={!menuState[0]}
+        inactive={menuState[0]}
         clicked={buttonChangeHandler}
       />
 
-      <Styles.MenuWrapper active={!buttonState[0]} inactive={buttonState[0]}>
+      <Styles.MenuWrapper active={!menuState[0]} inactive={menuState[0]}>
         <div className="innerWrapper">
           <Icon name="bread" styles={Styles.BreadIcon} />
           <MenuLinks />
+					<Styles.ImageStyle>
+						<Image alt="Borrelli's Bakery" src="bakery.jpg" />
+					</Styles.ImageStyle>
         </div>
       </Styles.MenuWrapper>
     </>
