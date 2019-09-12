@@ -21,7 +21,7 @@ const BackgroundSection = ({ className, src, innerGradiant, children }) => {
         }
       }
     }
-  `)
+	`)
 
   const match = useMemo(
     () => data.allFile.edges.find(({ node }) => src === node.relativePath),
@@ -45,7 +45,7 @@ const BackgroundSection = ({ className, src, innerGradiant, children }) => {
 
 const pageWrapper = styled(BackgroundSection)`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-position: center;
   background-size: cover;
 `
