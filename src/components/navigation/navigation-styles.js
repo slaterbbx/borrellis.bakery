@@ -46,16 +46,3 @@ export const BreadIcon = css`
   opacity: 0.03;
   transform: translate(-50%, -25%) rotate(90deg);
 `
-
-export const ImageStyle = styled.div`
-  position: absolute;
-  top: 10%;
-  left: 0;
-  transform: rotate(-20deg);
-  width: 60%;
-  height: 60%;
-  /* border: solid 6rem white; */
-  box-shadow: 2rem 2rem 10rem rgb(0, 0, 0, 0.2);
-
-  z-index: 5;
-`

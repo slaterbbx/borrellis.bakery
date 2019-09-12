@@ -7,7 +7,7 @@ import MenuLinks from "./menuLinks/menuLinks"
 import SlideShow from "../slideshow/slideShow"
 
 const NavMenu = () => {
-  const menuState = useState(false)
+  const menuState = useState(true)
 
   const buttonChangeHandler = () => {
     menuState[1](!menuState[0])

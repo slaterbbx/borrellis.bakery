@@ -33,7 +33,6 @@ export const ArrowRight = css`
 
   &:hover {
     margin-top: 1.6rem;
-    filter: drop-shadow(0 0.5rem 0.5rem rgb(0, 0, 0, 0.2));
   }
 `
 export const ArrowLeft = css`
@@ -42,7 +41,6 @@ export const ArrowLeft = css`
 
   &:hover {
     margin-top: 1.6rem;
-    filter: drop-shadow(0 0.5rem 0.5rem rgb(0, 0, 0, 0.2));
   }
 `
 export const ButtonWrapper = styled.div`
@@ -64,7 +62,8 @@ export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   border: solid 6rem white;
-  box-shadow: 2rem 2rem 10rem rgb(0, 0, 0, 0.2);
+	border-radius: .5rem;
+  box-shadow: 5rem 5rem 35rem rgb(255, 255, 255, 0.4);
 
   z-index: 5;
 `
