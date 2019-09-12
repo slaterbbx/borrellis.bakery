@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import media from '../../../util/mediaQuery'
+import media from "../../../util/mediaQuery"
 
 export const Wrapper = styled.nav`
   position: relative;
@@ -23,11 +23,11 @@ export const Wrapper = styled.nav`
     backface-visibility: hidden;
 
 		${media(
-			["min-800"],
-			css`
-				text-align: right;
-			`
-		)}
+      ["min-800"],
+      css`
+        text-align: right;
+      `
+    )}
   }
 
   li {
@@ -54,32 +54,32 @@ export const Wrapper = styled.nav`
       transition: all 0.48s;
 
 			${media(
-				["min-350"],
-				css`
-					font-size: 5rem;
-				`
-			)}
+        ["min-350"],
+        css`
+          font-size: 5rem;
+        `
+      )}
 
 			${media(
-				["min-500"],
-				css`
-					font-size: 7rem;
-				`
-			)}
+        ["min-500"],
+        css`
+          font-size: 7rem;
+        `
+      )}
 
 			${media(
-				["min-1000"],
-				css`
-					font-size: 10rem;
-				`
-			)}
+        ["min-1000"],
+        css`
+          font-size: 10rem;
+        `
+      )}
 
 			${media(
-				["min-2000"],
-				css`
-					font-size: 13rem;
-				`
-			)}
+        ["min-2000"],
+        css`
+          font-size: 13rem;
+        `
+      )}
 
       :hover {
         background-position: 100%;
@@ -92,11 +92,11 @@ export const Wrapper = styled.nav`
       margin-bottom: .5rem;
 
 			${media(
-				["min-800"],
-				css`
-					margin-bottom: 1rem;
-				`
-			)}
+        ["min-800"],
+        css`
+          margin-bottom: 1rem;
+        `
+      )}
     }
   }
 `
@@ -110,43 +110,43 @@ export const LinkIcon = css`
 	}
 
 	${media(
-		["min-350"],
-		css`
-			width: 3rem;
-		`
-	)}
+    ["min-350"],
+    css`
+      width: 3rem;
+    `
+  )}
 
 	${media(
-		["min-500"],
-		css`
-			width: 4.5rem;
-  		margin-left: 2rem;
+    ["min-500"],
+    css`
+      width: 4.5rem;
+      margin-left: 2rem;
 
-			&:last-child{
-				margin-right: 1rem;
-			}
-		`
-	)}
-
-	${media(
-		["min-1000"],
-		css`
-			width: 6rem;
-  		margin-left: 3rem;
-		`
-	)}
+      &:last-child {
+        margin-right: 1rem;
+      }
+    `
+  )}
 
 	${media(
-		["min-2000"],
-		css`
-			width: 8rem;
-  		margin-left: 4rem;
+    ["min-1000"],
+    css`
+      width: 6rem;
+      margin-left: 3rem;
+    `
+  )}
 
-			&:last-child{
-				margin-right: 3rem;
-			}
-		`
-	)}
+	${media(
+    ["min-2000"],
+    css`
+      width: 8rem;
+      margin-left: 4rem;
+
+      &:last-child {
+        margin-right: 3rem;
+      }
+    `
+  )}
 
 	color: inherit;
 	filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));

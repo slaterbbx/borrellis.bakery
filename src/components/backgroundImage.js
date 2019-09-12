@@ -1,27 +1,27 @@
 import React, { useMemo } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import styled from 'styled-components'
+import styled from "styled-components"
 
-const BackgroundSectionImage = ({className, src, children}) => {
+const BackgroundSectionImage = ({ className, src, children }) => {
   const data = useStaticQuery(graphql`
-		query {
-			allFile(filter: { internal: { mediaType: { regex: "images/" } } }) {
-				edges {
-					node {
-						relativePath
-						childImageSharp {
-							fluid(maxWidth: 1920) {
-								...GatsbyImageSharpFluid
-							}
-						}
-					}
-				}
-			}
-		}
-	`)
-	
-	const match = useMemo(
+    query {
+      allFile(filter: { internal: { mediaType: { regex: "images/" } } }) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const match = useMemo(
     () => data.allFile.edges.find(({ node }) => src === node.relativePath),
     [data, src]
   )

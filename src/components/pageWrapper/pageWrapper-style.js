@@ -6,7 +6,7 @@ const SharedStyles = css`
   height: 100vh;
   padding: 2rem;
 
-	overflow: hidden;
+  overflow: hidden;
 `
 const InnerGradiantOn = styled.div`
   ${SharedStyles}

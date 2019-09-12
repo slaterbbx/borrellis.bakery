@@ -27,9 +27,9 @@ export const NavButton = styled.div`
   background-color: ${({ theme }) => theme.colorBrandRed};
   border-radius: 100%;
   box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
-	transition: all .5s ease; 
+  transition: all 0.5s ease;
 
-	z-index: 3;
+  z-index: 3;
 
   .button {
     display: block;
@@ -103,20 +103,20 @@ export const NavButton = styled.div`
 
   ${({ active }) =>
     active &&
-		css`
-			background-color: ${({ theme }) => theme.colorWhite};
-			box-shadow: 0 0 0 rgb(0, 0, 0, 0);
+    css`
+      background-color: ${({ theme }) => theme.colorWhite};
+      box-shadow: 0 0 0 rgb(0, 0, 0, 0);
 
       .icon-x::before {
         transform: rotate(-135deg) scale(1.1);
-				${xColor2};
-				transition-delay: .5s;
+        ${xColor2};
+        transition-delay: 0.5s;
       }
 
       .icon-x::after {
         transform: rotate(135deg) scale(1.1);
-				${xColor2};
-				transition-delay: .5s;
+        ${xColor2};
+        transition-delay: 0.5s;
       }
 
       .icon-x--lines::before,
@@ -124,7 +124,7 @@ export const NavButton = styled.div`
         opacity: 0;
         transform: translateY(0);
       }
-	`}
+    `}
 
   ${({ inactive }) =>
     inactive &&
@@ -132,15 +132,15 @@ export const NavButton = styled.div`
       .icon-x::before,
       .icon-x::after {
         transition: transform 0.4s;
-				${xColor1};
-				transition-delay: .5s;
+        ${xColor1};
+        transition-delay: 0.5s;
       }
 
       .icon-x--lines::before,
       .icon-x--lines::after {
         transition: all 0.5s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-				${xColor1};
-				transition-delay: .5s;
+        ${xColor1};
+        transition-delay: 0.5s;
       }
     `}
 `
@@ -161,24 +161,6 @@ export const HomeButton = css`
     `
   )}
 `
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import styled, { css } from "styled-components"
 // import media from "../../util/mediaQuery"

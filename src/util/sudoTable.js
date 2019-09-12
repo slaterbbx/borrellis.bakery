@@ -18,9 +18,7 @@ const TableWrapper = styled.div`
 
 const SudoTable = ({ children }) => (
   <TableWrapper>
-    <div className="sudoTableCell">
-      {children}
-    </div>
+    <div className="sudoTableCell">{children}</div>
   </TableWrapper>
 )
 

@@ -4,7 +4,7 @@ import Icon from "../../util/icons/icons"
 import * as Styles from "./navigation-styles"
 import MenuLinks from "./menuLinks/menuLinks"
 
-import SlideShow from '../slideshow/slideShow'
+import SlideShow from "../slideshow/slideShow"
 
 const NavMenu = () => {
   const menuState = useState(false)
@@ -25,7 +25,7 @@ const NavMenu = () => {
         <div className="innerWrapper">
           <Icon name="bread" styles={Styles.BreadIcon} />
           <MenuLinks />
-					<SlideShow />
+          <SlideShow />
         </div>
       </Styles.MenuWrapper>
     </>
