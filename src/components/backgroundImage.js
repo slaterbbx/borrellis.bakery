@@ -41,7 +41,7 @@ const BackgroundSectionImage = ({ className, src, children }) => {
 const ImageBackground = styled(BackgroundSectionImage)`
   width: 100%;
   height: 100%;
-  background-position: center;
+  background-position: top;
   background-size: cover;
 `
 

@@ -70,14 +70,14 @@ export const Wrapper = styled.nav`
 			${media(
         ["min-1000"],
         css`
-          font-size: 10rem;
+          font-size: 8rem;
         `
       )}
 
 			${media(
         ["min-2000"],
         css`
-          font-size: 13rem;
+          font-size: 10rem;
         `
       )}
 
@@ -131,7 +131,7 @@ export const LinkIcon = css`
 	${media(
     ["min-1000"],
     css`
-      width: 6rem;
+      width: 5rem;
       margin-left: 3rem;
     `
   )}
@@ -139,7 +139,7 @@ export const LinkIcon = css`
 	${media(
     ["min-2000"],
     css`
-      width: 8rem;
+      width: 6rem;
       margin-left: 4rem;
 
       &:last-child {

@@ -1,20 +1,15 @@
 import React, { useState } from "react"
+
 import Icon from "../../util/icons/icons"
 
 import * as Styles from "./slideShow-style"
 import BackgroundImage from "../backgroundImage"
 
 const gallery = [
-  "flour",
-  "pizza",
-  "treats1",
-  "baggedPepper",
-  "treats2",
-  "breadHeld1",
-  "biscotti",
-  "treats3",
-  "pizzaChips",
-  "treats4",
+	"treats1",
+	"breadHeld1",
+	"carrotCake",
+	"pizza"
 ]
 let currentImage = gallery[0]
 
@@ -42,7 +37,7 @@ const SlideShow = () => {
   return (
     <Styles.SlideShowWrapper>
       <Styles.ImageWrapper>
-        <ImageSelector />
+					<ImageSelector />
       </Styles.ImageWrapper>
 
       <Styles.ButtonWrapper>
