@@ -21,7 +21,7 @@ const BackgroundSection = ({ className, src, innerGradiant, children }) => {
         }
       }
     }
-	`)
+  `)
 
   const match = useMemo(
     () => data.allFile.edges.find(({ node }) => src === node.relativePath),
