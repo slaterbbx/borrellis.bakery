@@ -63,7 +63,7 @@ export const ImageWrapper = styled.div`
   height: 100%;
   border: solid 6rem white;
 	border-radius: .5rem;
-  box-shadow: 5rem 5rem 35rem rgb(255, 255, 255, 0.4);
+  box-shadow: 5rem 5rem 35rem rgb(255, 255, 255, 0.3);
 
   z-index: 5;
 `
