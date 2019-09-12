@@ -21,6 +21,7 @@ import Specialty from "./svgs/specialty"
 import Wholesale from "./svgs/wholesale"
 import Yelp from "./svgs/yelp"
 import Home from "./svgs/home"
+import NavArrow from "./svgs/navArrow"
 
 const svgIcon = props => {
   let viewBox, PropsName, propsStyles
@@ -112,7 +113,10 @@ const svgIcon = props => {
       break
     case "home":
       PropsName = Home
-      break
+			break
+		case "navArrow":
+			PropsName = NavArrow
+		break
     default:
       PropsName = About
   }
