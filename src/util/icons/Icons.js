@@ -58,7 +58,8 @@ const svgIcon = props => {
       viewBox = "0 0 282 238"
       break
     case "about":
-      PropsName = About
+			PropsName = About
+			viewBox = "0 0 32 32"
       break
     case "biscuits":
       PropsName = Biscuits
