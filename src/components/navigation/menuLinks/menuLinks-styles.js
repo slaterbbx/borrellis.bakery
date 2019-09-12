@@ -67,6 +67,20 @@ export const Wrapper = styled.nav`
 				`
 			)}
 
+			${media(
+				["min-1000"],
+				css`
+					font-size: 10rem;
+				`
+			)}
+
+			${media(
+				["min-2000"],
+				css`
+					font-size: 13rem;
+				`
+			)}
+
       :hover {
         background-position: 100%;
         color: ${({ theme }) => theme.colorBrandRed};
@@ -76,6 +90,13 @@ export const Wrapper = styled.nav`
 
     &:not(:last-child) {
       margin-bottom: .5rem;
+
+			${media(
+				["min-800"],
+				css`
+					margin-bottom: 1rem;
+				`
+			)}
     }
   }
 `
@@ -97,6 +118,22 @@ export const LinkIcon = css`
 		css`
 			width: 4.5rem;
   		margin-left: 2rem;
+		`
+	)}
+
+	${media(
+		["min-1000"],
+		css`
+			width: 6rem;
+  		margin-left: 3rem;
+		`
+	)}
+
+	${media(
+		["min-2000"],
+		css`
+			width: 8rem;
+  		margin-left: 4rem;
 		`
 	)}
 
