@@ -116,6 +116,7 @@ const svgIcon = props => {
 			break
 		case "navArrow":
 			PropsName = NavArrow
+			viewBox = "0 0 32 32"
 		break
     default:
       PropsName = About
