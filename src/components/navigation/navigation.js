@@ -3,8 +3,6 @@ import NavButton from "./navigationButton"
 import Icon from "../../util/icons/icons"
 import * as Styles from "./navigation-styles"
 import MenuLinks from "./menuLinks/menuLinks"
-import styled, {css} from 'styled-components'
-import media from '../../util/mediaQuery'
 import GatsbyGallery from '../gatsbyGallery/gatsbyGallery'
 
 const gallery = [
@@ -14,24 +12,6 @@ const gallery = [
 	"carrotCake",
 	"pizza"
 ]
-
-const CustomGalleryWrapper = styled.div`
-	position: absolute;
-	top: 15%;
-	left: 5rem;
-	transform: rotate(-20deg);
-	width: 60%;
-	height: 75%;
-
-	z-index: 20;
-
-	${media(
-		["min-2000"],
-		css`
-			left: 10rem;
-		`
-	)}
-`
 
 const NavMenu = () => {
   const menuState = useState(false)
@@ -52,9 +32,20 @@ const NavMenu = () => {
         <div className="innerWrapper">
           <Icon name="bread" styles={Styles.BreadIcon} />
           <MenuLinks />
-					<CustomGalleryWrapper>
+					<Styles.CustomGalleryWrapper>
 						<GatsbyGallery gallery={gallery}/>
-					</CustomGalleryWrapper>
+					</Styles.CustomGalleryWrapper>
+					<Styles.SocialWrapper>
+						<div className="iconWrapper">
+							<Icon name="yelp" styles={Styles.SocialIcon}/>
+						</div>
+						<div className="iconWrapper">
+							<Icon name="facebook" styles={Styles.SocialIcon}/>
+						</div>
+						<div className="iconWrapper">
+							<Icon name="instagram" styles={Styles.SocialIcon}/>
+						</div>
+					</Styles.SocialWrapper>
         </div>
       </Styles.MenuWrapper>
     </>

@@ -7,7 +7,7 @@ export const Wrapper = styled.nav`
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 15;
+  z-index: 4;
   transition: transform 1s cubic-bezier(1, -0.22, 0.34, 1.52), opacity 1s;
 
   ul {
@@ -16,7 +16,7 @@ export const Wrapper = styled.nav`
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
-    z-index: 17;
+    z-index: 5;
     text-align: center;
     width: 100%;
 
@@ -104,6 +104,9 @@ export const Wrapper = styled.nav`
 export const LinkIcon = css`
   width: 2rem;
   margin-left: 1rem;
+
+	color: inherit;
+	filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
 	
 	&:last-child{
 		margin-right: 1rem;
@@ -147,7 +150,4 @@ export const LinkIcon = css`
       }
     `
   )}
-
-	color: inherit;
-	filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
 `
