@@ -79,10 +79,12 @@ const svgIcon = props => {
       PropsName = Cupcake
       break
     case "facebook":
-      PropsName = Facebook
+			PropsName = Facebook
+			viewBox = "0 0 32 32"
       break
     case "instagram":
-      PropsName = Instagram
+			PropsName = Instagram
+			viewBox = "0 0 32 32"
       break
     case "mapmarker":
       PropsName = Mapmarker
@@ -109,7 +111,8 @@ const svgIcon = props => {
       PropsName = Wholesale
       break
     case "yelp":
-      PropsName = Yelp
+			PropsName = Yelp
+			viewBox = "0 0 32 32"
       break
     case "home":
       PropsName = Home
