@@ -10,7 +10,7 @@ export const GalleryWrapper = styled.div`
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  border: solid 4rem white;
+  border: solid 2rem white;
 	border-radius: .5rem;
   box-shadow: 5rem 5rem 35rem rgb(255, 255, 255, 0.3);
 
