@@ -19,7 +19,7 @@ const Navigation = ({ clicked, active, inactive }) => (
 		// displayed only on the websites home page. The state for this "Icon swap" will
 		// need to be housed on the component itself 
 		//  homepage={true} or similar. */}
-    <Icon name="about" styles={Styles.HomeButton} />
+    <Icon name="about" styles={Styles.HomeButton} viewbox="0 0 32 32" />
   </Styles.NavButtonWrapper>
 )
 

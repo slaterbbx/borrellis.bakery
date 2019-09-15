@@ -50,11 +50,12 @@ export const BreadIcon = css`
 
 export const CustomGalleryWrapper = styled.div`
 position: absolute;
-top: 15%;
-left: 5rem;
-transform: rotate(-20deg);
-width: 60%;
-height: 75%;
+top: 15rem;
+left: 4rem;
+margin-left: 3rem;
+transform: rotate(-15deg);
+width: 62%;
+height: 80%;
 
 z-index: 20;
 
@@ -74,11 +75,11 @@ export const SocialWrapper = styled.div`
 	z-index: 7;
 
 	.iconWrapper{
-		width: 10rem;
+		width: 7rem;
 		transform: translateY(0);
 		opacity: 0.5;
 		cursor: pointer;
-		transition: all .2s ease-in;
+		transition: all .1s ease-in;
 
 		&:not(:last-child){
 			margin-right: 4rem;

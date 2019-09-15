@@ -52,7 +52,7 @@ export const Wrapper = styled.nav`
       );
       background-size: 230%;
       transition: all 0.48s;
-
+			
 			${media(
         ["min-350"],
         css`
@@ -63,14 +63,14 @@ export const Wrapper = styled.nav`
 			${media(
         ["min-500"],
         css`
-          font-size: 7rem;
+          font-size: 6rem;
         `
       )}
 
 			${media(
         ["min-1000"],
         css`
-          font-size: 8rem;
+          font-size: 7rem;
         `
       )}
 
