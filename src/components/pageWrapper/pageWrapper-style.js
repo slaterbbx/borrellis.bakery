@@ -3,8 +3,7 @@ import styled, { css } from "styled-components"
 const SharedStyles = css`
   position: relative;
   width: 100%;
-  height: 100vh;
-  padding: 2rem;
+  height: 100%;
 
   overflow: hidden;
 `
