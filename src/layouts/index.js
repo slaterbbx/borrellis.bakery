@@ -27,6 +27,15 @@ const Layout = ({ children, path }) => {
 			case "/menu/":
 				background[1]('bakery.jpg')
 				break;
+			case "/about/":
+					background[1]('bread.jpg')
+					break;
+			case "/contact/":
+					background[1]('treats.jpg')
+					break;
+			case "/wholesale/":
+					background[1]('carrotCake.jpg')
+					break;
 			default:
 				background[1]('displayCase.jpg')
 		}

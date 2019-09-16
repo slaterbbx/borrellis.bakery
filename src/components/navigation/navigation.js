@@ -31,7 +31,7 @@ const NavMenu = () => {
       <Styles.MenuWrapper active={!menuState[0]} inactive={menuState[0]}>
         <div className="innerWrapper">
           <Icon name="bread" styles={Styles.BreadIcon} />
-          <MenuLinks />
+          <MenuLinks clicked={buttonChangeHandler}/>
 					<Styles.CustomGalleryWrapper>
 						<GatsbyGallery gallery={gallery}/>
 					</Styles.CustomGalleryWrapper>
