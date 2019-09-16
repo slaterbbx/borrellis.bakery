@@ -2,12 +2,12 @@ import React from 'react'
 
 import SEO from "../components/seo"
 
-const Menu = ()=> {
+const Wholesale = ()=> {
 
 
 	return (
 		<>
-		<SEO title="Menu" />
+		<SEO title="Wholesale" />
 		<p>
 			test
 		</p>
@@ -15,4 +15,4 @@ const Menu = ()=> {
 	)
 }
 
-export default Menu
+export default Wholesale
