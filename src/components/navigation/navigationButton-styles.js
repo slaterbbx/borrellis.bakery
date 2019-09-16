@@ -31,7 +31,6 @@ export const NavButtonWrapper = styled.div`
 `
 
 export const NavButton = styled.div`
-  position: relative;
   background-color: ${({ theme }) => theme.colorBrandRed};
   border-radius: 100%;
   box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
@@ -161,6 +160,8 @@ export const HomeButton = css`
   color: ${({ theme }) => theme.colorWhite};
   cursor: pointer;
   filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
+
+	z-index: 2;
 
   ${media(
     ["min-800"],

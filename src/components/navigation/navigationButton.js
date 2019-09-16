@@ -10,15 +10,6 @@ const Navigation = ({ clicked, active, inactive }) => (
         <span className="icon-x--lines"></span>
       </div>
     </Styles.NavButton>
-
-    {/* // Need to build a custom component for the ICON that is going
-		// to be swapping out for a Home Icon in the future when clicked,
-		// the component needs to have a state, one of the states of the component will display
-		// the home Icon, the home Icon should be the default icon shown because it will be
-		// the one that is displayed on 99% of pages, The  INFO icon will be
-		// displayed only on the websites home page. The state for this "Icon swap" will
-		// need to be housed on the component itself 
-		//  homepage={true} or similar. */}
     <Icon name="about" styles={Styles.HomeButton} viewbox="0 0 32 32" />
   </Styles.NavButtonWrapper>
 )
