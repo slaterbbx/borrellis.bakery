@@ -4,29 +4,15 @@ import { Link } from "gatsby"
 
 import Icon from "../../../util/icons/icons"
 
-const MenuContent = () => {
-  const cockPit = (linkAddress, iconAlignment) => {
-    const left = (
-      <Link to={linkAddress}>
-        <Icon name={linkAddress} styles={Styles.LinkIcon} />
+const MenuContent = ({clicked}) => {
+
+  const cockPit = (linkAddress) => {
+     return (
+      <Link to={`/${linkAddress}`} onClick={clicked}>
         {linkAddress}
+        <Icon name={linkAddress} styles={Styles.LinkIcon}/>
       </Link>
     )
-
-    const right = (
-      <Link to={`/${linkAddress}`}>
-        {linkAddress}
-        <Icon name={linkAddress} styles={Styles.LinkIcon} />
-      </Link>
-    )
-
-    let cockPit = right
-
-    if (iconAlignment === "left") {
-      cockPit = left
-    }
-
-    return cockPit
   }
 
   return (
