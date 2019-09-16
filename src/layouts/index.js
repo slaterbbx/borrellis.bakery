@@ -18,24 +18,29 @@ const ContentWrapper = styled.div`
 const Layout = ({ children, path }) => {
 
 	const background = useState('displayCase.jpg');
+	const gradiant = useState(true);
 
 	useEffect(()=>{
 		switch (path) {
 			case "/":
-				background[1]('displayCase.jpg')
+				background[1]('displayCase.jpg');
 				break;
 			case "/menu/":
-				background[1]('bakery.jpg')
+				gradiant[1](false);
+				background[1]('bakery.jpg');
 				break;
 			case "/about/":
-					background[1]('bread.jpg')
-					break;
+				gradiant[1](false);
+				background[1]('bread.jpg');
+				break;
 			case "/contact/":
-					background[1]('treats.jpg')
-					break;
+				gradiant[1](false);
+				background[1]('treats.jpg');
+				break;
 			case "/wholesale/":
-					background[1]('carrotCake.jpg')
-					break;
+				gradiant[1](false);
+				background[1]('carrotCake.jpg')
+				break;
 			default:
 				background[1]('displayCase.jpg')
 		}
@@ -49,7 +54,7 @@ const Layout = ({ children, path }) => {
 				<GlobalBaseStyles />
 				<ContentWrapper>
 					<Navigation />
-					<PageWrapper src={background[0]} innerGradiant={true}>
+					<PageWrapper src={background[0]} gradiant={gradiant[0]}>
 						{children}
 					</PageWrapper>
 				</ContentWrapper>
