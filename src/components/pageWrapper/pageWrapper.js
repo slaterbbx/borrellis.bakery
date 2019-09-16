@@ -5,7 +5,7 @@ import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import StyleChecker from "./pageWrapper-style"
 
-const BackgroundSection = ({ className, src, innerGradiant, children }) => {
+const BackgroundSection = ({ className, src, gradiant, children }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { internal: { mediaType: { regex: "images/" } } }) {
@@ -29,7 +29,7 @@ const BackgroundSection = ({ className, src, innerGradiant, children }) => {
   )
 
   // sends true or false to the pageWrapper-styles.js to determine what version to use, 1 or 2 gradiants.
-  let CockPit = StyleChecker(innerGradiant)
+  let CockPit = StyleChecker(gradiant)
 
   return (
     <BackgroundImage
