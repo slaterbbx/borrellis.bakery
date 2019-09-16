@@ -4,8 +4,6 @@ import SEO from "../components/seo"
 
 import Icon from "../util/icons/icons"
 import { css } from 'styled-components'
-import PageWrapper from "../components/pageWrapper/pageWrapper"
-import Navigation from "../components/navigation/navigation"
 import SudoTable from "../util/sudoTable"
 import media from "../util/mediaQuery"
 
@@ -34,15 +32,13 @@ export const Logo = css`
 `
 
 const IndexPage = () => {
+
   return (
     <>
       <SEO title="Home" />
-      <PageWrapper src="displayCase.jpg" innerGradiant={true}>
-        <Navigation />
         <SudoTable>
           <Icon name="logo" styles={Logo} />
         </SudoTable>
-      </PageWrapper>
     </>
   )
 }
