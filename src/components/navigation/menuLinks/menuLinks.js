@@ -2,15 +2,15 @@ import React from "react"
 import * as Styles from "./menuLinks-styles"
 import { Link } from "gatsby"
 
-import Icon from "../../../util/icons/icons"
+import Icon from "../../../util/icons/icons" 
 
 const MenuContent = ({clicked}) => {
 
   const cockPit = (linkAddress) => {
      return (
-      <Link to={`/${linkAddress}`} onClick={clicked}>
+      <Link to={`/${linkAddress}`} activeClassName="active" onClick={clicked}>
         {linkAddress}
-        <Icon name={linkAddress} styles={Styles.LinkIcon}/>
+        <Icon name={linkAddress} activeClassName="active" styles={Styles.LinkIcon}/>
       </Link>
     )
   }

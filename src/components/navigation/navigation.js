@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import NavButton from "./navigationButton"
+import NavigationButtons from "./navigationButtons"
 import Icon from "../../util/icons/icons"
 import * as Styles from "./navigation-styles"
 import MenuLinks from "./menuLinks/menuLinks"
@@ -13,25 +13,40 @@ const gallery = [
 	"pizza"
 ]
 
-const NavMenu = () => {
-  const menuState = useState(true)
+const NavMenu = ({path}) => {
+  const menuButtonState = useState(true)
+  const infoButtonState = useState(true)
 
-  const buttonChangeHandler = () => {
-    menuState[1](!menuState[0])
+  const menuButtonChangeHandler = () => {
+    menuButtonState[1](!menuButtonState[0])
+	}
+
+  const infoButtonChangeHandler = () => {
+    infoButtonState[1](!infoButtonState[0])
+	}
+
+	let isHomePage = false;
+
+	if ( path === '/' ){
+		isHomePage = true;
+	} else {
+		isHomePage = false;
 	}
 
   return (
     <>
-      <NavButton
-        active={!menuState[0]}
-        inactive={menuState[0]}
-        clicked={buttonChangeHandler}
+      <NavigationButtons
+        active={!menuButtonState[0]}
+        inactive={menuButtonState[0]}
+				clickedNavButton={menuButtonChangeHandler}
+				clickedInfoButton={infoButtonChangeHandler}
+				isHomePage={isHomePage}
       />
 
-      <Styles.MenuWrapper active={!menuState[0]} inactive={menuState[0]}>
+      <Styles.MenuWrapper active={!menuButtonState[0]} inactive={menuButtonState[0]}>
         <div className="innerWrapper">
           <Icon name="bread" styles={Styles.BreadIcon} />
-          <MenuLinks clicked={buttonChangeHandler}/>
+          <MenuLinks clicked={menuButtonChangeHandler}/>
 					<Styles.CustomGalleryWrapper>
 						<GatsbyGallery gallery={gallery}/>
 					</Styles.CustomGalleryWrapper>
