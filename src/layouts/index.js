@@ -53,7 +53,7 @@ const Layout = ({ children, path }) => {
 			<>
 				<GlobalBaseStyles />
 				<ContentWrapper>
-					<Navigation />
+					<Navigation path={path}/>
 					<PageWrapper src={background[0]} gradiant={gradiant[0]}>
 						{children}
 					</PageWrapper>
