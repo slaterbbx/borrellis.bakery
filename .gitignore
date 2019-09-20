@@ -68,4 +68,4 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-src/global/base-fonts.js
+./src/global/fonts2.js
