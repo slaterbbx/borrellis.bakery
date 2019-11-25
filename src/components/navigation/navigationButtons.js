@@ -1,6 +1,6 @@
-import React from "react"
-import * as Styles from "./navigationButtons-styles"
-import Icon from "../../util/icons/icons"
+import React from 'react'
+import * as Styles from './navigationButtons-styles'
+import Icon from '../../util/icons/icons'
 import {Link} from 'gatsby'
 
 const LinkWrapper = {

@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components"
-import media from "../../util/mediaQuery"
+import styled, { css } from 'styled-components'
+import media from '../../util/mediaQuery'
 
 const buttonLineSize = css`
   width: 4rem;

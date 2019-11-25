@@ -48,7 +48,7 @@ export const BreadIcon = css`
   transform: translate(-50%, -25%) rotate(90deg);
 `
 
-export const CustomGalleryWrapper = styled.div`
+export const GalleryWrapper = styled.div`
 position: absolute;
 top: 15rem;
 left: 4rem;
@@ -65,34 +65,4 @@ ${media(
 		left: 10rem;
 	`
 )}
-`
-
-export const SocialWrapper = styled.div`
-	display: flex;
-	position: absolute;
-	bottom: 3rem;
-	right: 4rem;
-	z-index: 7;
-
-	.iconWrapper{
-		width: 7rem;
-		transform: translateY(0);
-		opacity: 0.5;
-		cursor: pointer;
-		transition: all .1s ease-in;
-
-		&:not(:last-child){
-			margin-right: 4rem;
-		}
-
-		&:hover{
-			transform: translateY(-1rem);
-			opacity: 1;
-		}
-	}
-`
-export const SocialIcon = css`
-	width: 100%;
-	color: ${({theme}) => theme.colorWhite};
-	filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
 `
