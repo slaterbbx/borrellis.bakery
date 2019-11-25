@@ -48,6 +48,8 @@ const pageWrapper = styled(BackgroundSection)`
   height: 100%;
   background-position: center;
   background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
 `
 
 export default pageWrapper
