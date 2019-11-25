@@ -55,7 +55,7 @@ const AboutWrapper = styled.div`
 
 	.copy{
 
-		font-size: 5rem;
+		font-size: 3.5rem;
 		font-weight: 300;
 	}
 `
