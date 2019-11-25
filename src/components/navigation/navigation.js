@@ -26,11 +26,12 @@ const NavMenu = ({path}) => {
 	// Simple handler that switchs the menu button clicked state boolean value onClick events
   const menuButtonChangeHandler = () => {
 		menuButtonState[1](!menuButtonState[0])
+		console.log(infoButtonState[0] + ' Clicked!!!!')
 	}
 	
 	// Simple handler that switchs the info button clicked state boolean value onClick events
   const infoButtonChangeHandler = () => {
-    infoButtonState[1](!infoButtonState[0])
+		infoButtonState[1](!infoButtonState[0])
 	}
 
 	// Checks if current page is root path based on props passed down from layouts/index.js

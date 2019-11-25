@@ -70,14 +70,7 @@ export const Wrapper = styled.nav`
 			${media(
         ["min-1000"],
         css`
-          font-size: 7rem;
-        `
-      )}
-
-			${media(
-        ["min-2000"],
-        css`
-          font-size: 10rem;
+          font-size: 5rem;
         `
       )}
 

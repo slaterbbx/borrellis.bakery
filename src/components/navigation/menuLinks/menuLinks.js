@@ -1,8 +1,8 @@
-import React from "react"
-import * as Styles from "./menuLinks-styles"
-import { Link } from "gatsby"
+import React from 'react'
+import * as Styles from './menuLinks-styles'
+import { Link } from 'gatsby'
 
-import Icon from "../../../util/icons/icons" 
+import Icon from '../../../util/icons/icons'
 
 const MenuContent = ({clicked}) => {
 
