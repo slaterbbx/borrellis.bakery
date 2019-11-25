@@ -44,7 +44,7 @@ const Layout = ({ children, path }) => {
 			default:
 				background[1]('displayCase.jpg')
 		}
-	},[background, path, gradiant])
+	},[path])
 
 	
 
