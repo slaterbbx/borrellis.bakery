@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import NavigationButtons from "./navigationButtons"
-import Icon from "../../util/icons/icons"
-import * as Styles from "./navigation-styles"
-import MenuLinks from "./menuLinks/menuLinks"
+import React, { useState } from 'react'
+import NavigationButtons from './navigationButtons'
+import Icon from '../../util/icons/icons'
+import * as Styles from './navigation-styles'
+import MenuLinks from './menuLinks/menuLinks'
 import GatsbyGallery from '../gatsbyGallery/gatsbyGallery'
 
 import NavSocialLinks from './menuLinks/navSocialLinks'
