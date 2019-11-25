@@ -10,7 +10,8 @@ const gallery = [
 	"flour",
 	"bread",
 	"carrotCake",
-	"pizza"
+	"pizza",
+	"bakery"
 ]
 
 const NavMenu = ({path}) => {
