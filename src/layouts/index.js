@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from 'react'
 
-import styled, { ThemeProvider } from "styled-components"
-import { defaultTheme } from "../global/base-theme"
-import GlobalBaseStyles from "../global/base-styles"
+import styled, { ThemeProvider } from 'styled-components'
+import { defaultTheme } from '../global/base-theme'
+import GlobalBaseStyles from '../global/base-styles'
+import GlobalContext from '../components/context/globalContext'
 
 import Navigation from '../components/navigation/navigation'
 import PageWrapper from '../components/pageWrapper/pageWrapper'
@@ -17,6 +18,7 @@ const AppWrapper = styled.div`
 
 const Layout = ({ children, path }) => {
 
+	// Page background state ( changes with page address )
 	const background = useState('displayCase.jpg');
 	const gradiant = useState(true);
 
@@ -50,7 +52,7 @@ const Layout = ({ children, path }) => {
 
 	return (
 		<ThemeProvider theme={defaultTheme}>
-			<>
+			<GlobalContext>
 				<GlobalBaseStyles />
 				<AppWrapper>
 					<Navigation path={path}/>
@@ -58,7 +60,7 @@ const Layout = ({ children, path }) => {
 						{children}
 					</PageWrapper>
 				</AppWrapper>
-			</>
+			</GlobalContext>
 		</ThemeProvider>
 	)
 }
