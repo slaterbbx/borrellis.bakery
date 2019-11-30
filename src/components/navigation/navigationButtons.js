@@ -3,28 +3,38 @@ import * as Styles from './navigationButtons-styles'
 import Icon from '../../util/icons/icons'
 import {Link} from 'gatsby'
 
-const LinkWrapper = {
-	width: '100%',
-	marginTop: '.2rem',
-	textAlign: 'center'
-}
+const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isHomePage, infoButtonState}) => {
 
-const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isHomePage }) => {
-
-	let home_infoButton = (
-			<Link to="/" style={LinkWrapper}>
-				<Styles.HomeButton>
-					<Icon name="home" styles={Styles.Icon} viewbox="0 0 42 32" />
+	let homeButton = (
+		<>
+			<Styles.HomeButtonWrapper>
+				<Link to="/">
+					<Styles.HomeButton active={false}>
+						<Icon name="home" styles={Styles.Icon} viewbox="0 0 42 32" />
+					</Styles.HomeButton>
+				</Link>
+				<Styles.HomeButton onClick={clickedInfoButton} active={true}>
+							<Icon name="about" styles={Styles.Icon} viewbox="0 0 32 32"/>
 				</Styles.HomeButton>
-			</Link>
+			</Styles.HomeButtonWrapper>
+		</>
 	)
 	
-	// Also, divide up the icon into two components so that we can have it swipe on and off the page when
-	// when changing between icons? Just a thought.
-	if ( isHomePage === true ){
-		home_infoButton = <Styles.HomeButton onClick={clickedInfoButton}>
-			<Icon name="about" styles={Styles.Icon} viewbox="0 0 32 32"/>
-		</Styles.HomeButton>
+	if ( isHomePage === true){
+		homeButton = (
+			<>
+				<Styles.HomeButtonWrapper>
+					<Link to="/">
+						<Styles.HomeButton onClick={clickedInfoButton} active={infoButtonState}>
+							<Icon name="home" styles={Styles.Icon} viewbox="0 0 42 32" />
+						</Styles.HomeButton>
+					</Link>
+					<Styles.HomeButton onClick={clickedInfoButton} active={!infoButtonState}>
+								<Icon name="about" styles={Styles.Icon} viewbox="0 0 32 32"/>
+					</Styles.HomeButton>
+				</Styles.HomeButtonWrapper>
+			</>
+		)
 	}
 
 	return (
@@ -35,7 +45,7 @@ const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isH
         <span className="icon-x--lines"></span>
       </div>
     </Styles.NavButton>
-    {home_infoButton}
+    {homeButton}
   </Styles.NavButtonWrapper>
 	)
 }

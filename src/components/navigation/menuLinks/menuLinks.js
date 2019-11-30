@@ -5,11 +5,14 @@ import { Link } from 'gatsby'
 import Icon from '../../../util/icons/icons'
 
 const MenuContent = ({clicked, path}) => {
-
 	
 	const linkGenerator = (linkAddress) => {
 		let activeLink = false;
-		const pathName = path.substring(1, path.length-1);
+		let pathName = '';
+
+		if (path !== undefined){
+			pathName = path.substring(1, path.length-1);
+		}
 
 		if (linkAddress === pathName){
 			activeLink = true;
@@ -25,8 +28,6 @@ const MenuContent = ({clicked, path}) => {
     )
 	}
 	
-	
-
   return (
     <Styles.Wrapper>
       <Styles.ListWrapper>

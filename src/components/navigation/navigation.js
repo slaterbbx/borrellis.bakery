@@ -24,6 +24,7 @@ const NavMenu = ({path}) => {
 	
 	const dispatch = useContext(GlobalDispatchContext);
 	const state = useContext(GlobalStateContext)
+	const infoButtonState = state.infoButton
 
 	// Simple handler that switchs the menu button clicked state boolean value onClick events
   const menuButtonChangeHandler = () => {
@@ -49,6 +50,8 @@ const NavMenu = ({path}) => {
 				clickedNavButton={menuButtonChangeHandler}
 				clickedInfoButton={infoButtonChangeHandler}
 				isHomePage={isHomePage}
+				infoButtonState={infoButtonState}
+				dispatch={dispatch}
       />
 
       <Styles.MenuWrapper active={!state.menuButton} inactive={state.menuButton}>

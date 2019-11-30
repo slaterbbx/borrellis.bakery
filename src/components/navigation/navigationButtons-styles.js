@@ -156,19 +156,33 @@ export const NavButton = styled.div`
     `}
 `
 
-export const HomeButton = styled.div`
+export const HomeButtonWrapper = styled.div`
 	position: relative;
-	display: flex;
-	justify-content: center;
 	width: 100%;
-  cursor: pointer;
-  filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
 
 	z-index: 2;
 `
 
+export const HomeButton = styled.div`
+	position: absolute;
+	width: 100%;
+  cursor: pointer;
+  filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
+	transition: all 1s ease;
+
+	height: 7rem;
+	z-index: 3;
+
+	${({active}) => active && css`
+			transform: translateX(200%);
+	`}
+`
+
 export const Icon = css`
-  margin-top: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
   width: 4rem;
   color: ${({ theme }) => theme.colorWhite};
 `

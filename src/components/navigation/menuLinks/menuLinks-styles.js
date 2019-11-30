@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components"
-import media from "../../../util/mediaQuery"
 
 export const Wrapper = styled.nav`
   position: relative;
@@ -23,13 +22,6 @@ export const ListWrapper = styled.div`
 	width: 100%;
 
 	backface-visibility: hidden;
-
-	${media(
-		["min-800"],
-		css`
-			text-align: right;
-		`
-	)}
 `
 
 export const ListItem = styled.div`
@@ -76,20 +68,13 @@ export const ListItem = styled.div`
 	}
 
 	&:not(:last-child) {
-		margin-bottom: .5rem;
-
-		${media(
-			["min-800"],
-			css`
-				margin-bottom: 1rem;
-			`
-		)}
+		margin-bottom: 1rem;
 	}
 `
 
 export const LinkIcon = css`
-  width: 2rem;
-  margin-left: 1rem;
+  width: 4rem;
+	margin-left: 2rem;
 
 	color: inherit;
 	filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
@@ -97,43 +82,4 @@ export const LinkIcon = css`
 	&:last-child{
 		margin-right: 1rem;
 	}
-
-	${media(
-    ["min-350"],
-    css`
-      width: 3rem;
-    `
-  )}
-
-	${media(
-    ["min-500"],
-    css`
-      width: 4.5rem;
-      margin-left: 2rem;
-
-      &:last-child {
-        margin-right: 1rem;
-      }
-    `
-  )}
-
-	${media(
-    ["min-1000"],
-    css`
-      width: 5rem;
-      margin-left: 3rem;
-    `
-  )}
-
-	${media(
-    ["min-2000"],
-    css`
-      width: 6rem;
-      margin-left: 4rem;
-
-      &:last-child {
-        margin-right: 3rem;
-      }
-    `
-  )}
 `
