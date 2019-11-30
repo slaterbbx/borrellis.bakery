@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useContext} from 'react'
 import NavigationButtons from './navigationButtons'
 import Icon from '../../util/icons/icons'
 import * as Styles from './navigation-styles'
@@ -6,6 +6,8 @@ import MenuLinks from './menuLinks/menuLinks'
 import GatsbyGallery from '../gatsbyGallery/gatsbyGallery'
 
 import NavSocialLinks from './menuLinks/navSocialLinks'
+
+import {GlobalDispatchContext, GlobalStateContext} from '../context/globalContext'
 
 // Array of names of image files in the src/images folder used by a custom
 // built gallary being used in the navigation menu on desktop view
@@ -19,19 +21,18 @@ const gallery = [
 ]
 
 const NavMenu = ({path}) => {
-	// State for menuButton and infoButton
-  const menuButtonState = useState(true)
-  const infoButtonState = useState(true)
+	
+	const dispatch = useContext(GlobalDispatchContext);
+	const state = useContext(GlobalStateContext)
 
 	// Simple handler that switchs the menu button clicked state boolean value onClick events
   const menuButtonChangeHandler = () => {
-		menuButtonState[1](!menuButtonState[0])
-		console.log(infoButtonState[0] + ' Clicked!!!!')
+		dispatch({type: 'MENU_BUTTON'})
 	}
 	
 	// Simple handler that switchs the info button clicked state boolean value onClick events
   const infoButtonChangeHandler = () => {
-		infoButtonState[1](!infoButtonState[0])
+		dispatch({type: 'INFO_BUTTON'})
 	}
 
 	// Checks if current page is root path based on props passed down from layouts/index.js
@@ -43,17 +44,17 @@ const NavMenu = ({path}) => {
   return (
     <>
       <NavigationButtons
-        active={!menuButtonState[0]}
-        inactive={menuButtonState[0]}
+        active={!state.menuButton}
+        inactive={state.menuButton}
 				clickedNavButton={menuButtonChangeHandler}
 				clickedInfoButton={infoButtonChangeHandler}
 				isHomePage={isHomePage}
       />
 
-      <Styles.MenuWrapper active={!menuButtonState[0]} inactive={menuButtonState[0]}>
+      <Styles.MenuWrapper active={!state.menuButton} inactive={state.menuButton}>
         <div className="innerWrapper">
           <Icon name="bread" styles={Styles.BreadIcon} />
-          <MenuLinks clicked={menuButtonChangeHandler}/>
+          <MenuLinks clicked={menuButtonChangeHandler} path={path}/>
 					<Styles.GalleryWrapper>
 						<GatsbyGallery gallery={gallery}/>
 					</Styles.GalleryWrapper>

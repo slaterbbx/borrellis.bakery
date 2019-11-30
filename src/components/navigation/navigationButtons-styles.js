@@ -21,13 +21,13 @@ export const NavButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-	${media(
+	/* ${media(
       ["min-2000"],
       css`
         top: 3rem;
   			right: 3rem;
       `
-    )}
+    )} */
 `
 
 export const NavButton = styled.div`
@@ -45,13 +45,13 @@ export const NavButton = styled.div`
     width: 7rem;
     cursor: pointer;
 
-    ${media(
+    /* ${media(
       ["min-800"],
       css`
         height: 8rem;
         width: 8rem;
       `
-    )}
+    )} */
   }
 
   .icon-x {
@@ -149,25 +149,26 @@ export const NavButton = styled.div`
         ${xColor1};
         transition-delay: 0.5s;
       }
+
+			&:hover{
+				background-color: ${({ theme }) => theme.colorBrandRedLight};
+			}
     `}
 `
 
-export const HomeButton = css`
+export const HomeButton = styled.div`
 	position: relative;
-  margin-top: 1rem;
-  width: 5rem;
-  padding: 1rem;
-  align-self: center;
-  color: ${({ theme }) => theme.colorWhite};
+	display: flex;
+	justify-content: center;
+	width: 100%;
   cursor: pointer;
   filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
 
 	z-index: 2;
+`
 
-  ${media(
-    ["min-800"],
-    css`
-      width: 6rem;
-    `
-  )}
+export const Icon = css`
+  margin-top: 2rem;
+  width: 4rem;
+  color: ${({ theme }) => theme.colorWhite};
 `

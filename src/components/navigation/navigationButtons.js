@@ -13,15 +13,18 @@ const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isH
 
 	let home_infoButton = (
 			<Link to="/" style={LinkWrapper}>
-				<Icon name="home" styles={Styles.HomeButton} viewbox="0 0 42 32" />
+				<Styles.HomeButton>
+					<Icon name="home" styles={Styles.Icon} viewbox="0 0 42 32" />
+				</Styles.HomeButton>
 			</Link>
 	)
 	
-	// NEED to put a div around the icon because it is not registering the onClick direction off of the SVG
 	// Also, divide up the icon into two components so that we can have it swipe on and off the page when
 	// when changing between icons? Just a thought.
 	if ( isHomePage === true ){
-		home_infoButton = <Icon name="about" styles={Styles.HomeButton} viewbox="0 0 32 32" onClick={clickedInfoButton}/>
+		home_infoButton = <Styles.HomeButton onClick={clickedInfoButton}>
+			<Icon name="about" styles={Styles.Icon} viewbox="0 0 32 32"/>
+		</Styles.HomeButton>
 	}
 
 	return (
