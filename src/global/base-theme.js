@@ -5,7 +5,7 @@ export const defaultTheme = {
 
   colorBrandGreen: "#3D5525",
 	colorBrandRed: "#C93831",
-	colorBrandRedLight: "#E23E37",
+	colorBrandRedLight: "#E1443D",
 
   colorDarkGrey: "#313131",
   colorDarkerGrey: "#212121",
