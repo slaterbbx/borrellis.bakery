@@ -9,89 +9,82 @@ export const Wrapper = styled.nav`
   width: 100%;
   z-index: 4;
   transition: transform 1s cubic-bezier(1, -0.22, 0.34, 1.52), opacity 1s;
+`
 
-  ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    z-index: 5;
-    text-align: center;
-    width: 100%;
+export const ListWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	text-align: right;
+	width: 100%;
 
-    backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	${media(
+		["min-800"],
+		css`
+			text-align: right;
+		`
+	)}
+`
+
+export const ListItem = styled.div`
+	a, a:visited{
+		color: ${({ theme }) => theme.colorWhite};
+		cursor: pointer;
+		font-family: ${({ theme }) => theme.fontPrimary};
+		letter-spacing: 0.2rem;
+		display: inline-block;
+		font-size: 5rem;
+		font-weight: 300;
+		text-shadow: .3rem .2rem .4rem rgb(0,0,0,.1);
+		text-transform: capitalize;
+		padding: 1rem 2rem;
+		color: ${({ theme }) => theme.fontPrimary};
+		text-decoration: none;
+		background-image: linear-gradient(
+			120deg,
+			transparent 0%,
+			transparent 50%,
+			${({ theme }) => theme.colorWhite} 50%
+		);
+		background-size: 230%;
+		transition: all 0.48s;
+
+		:hover {
+			background-position: 100%;
+			color: ${({ theme }) => theme.colorBrandRed};
+			transform: translateX(1rem);
+		}
+
+		${({ active }) =>
+    active &&
+			css`
+			cursor: default;
+			opacity: .3;
+			color: ${({ theme }) => theme.colorBrandRed};
+			background-position: 100%;
+
+			:hover {
+				transform: translateX(0);
+			}
+		`}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: .5rem;
 
 		${media(
-      ["min-800"],
-      css`
-        text-align: right;
-      `
-    )}
-  }
-
-  li {
-    a {
-      color: ${({ theme }) => theme.colorWhite};
-      cursor: pointer;
-      font-family: ${({ theme }) => theme.fontPrimary};
-      letter-spacing: 0.2rem;
-      display: inline-block;
-      font-size: 3.5rem;
-      font-weight: 300;
-			text-shadow: .3rem .2rem .4rem rgb(0,0,0,.1);
-			text-transform: capitalize;
-      padding: 1rem 2rem;
-      color: ${({ theme }) => theme.fontPrimary};
-      text-decoration: none;
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        ${({ theme }) => theme.colorWhite} 50%
-      );
-      background-size: 230%;
-      transition: all 0.48s;
-			
-			${media(
-        ["min-350"],
-        css`
-          font-size: 5rem;
-        `
-      )}
-
-			${media(
-        ["min-500"],
-        css`
-          font-size: 6rem;
-        `
-      )}
-
-			${media(
-        ["min-1000"],
-        css`
-          font-size: 5rem;
-        `
-      )}
-
-      :hover {
-        background-position: 100%;
-        color: ${({ theme }) => theme.colorBrandRed};
-        transform: translateX(1rem);
-      }
-    }
-
-    &:not(:last-child) {
-      margin-bottom: .5rem;
-
-			${media(
-        ["min-800"],
-        css`
-          margin-bottom: 1rem;
-        `
-      )}
-    }
-  }
+			["min-800"],
+			css`
+				margin-bottom: 1rem;
+			`
+		)}
+	}
 `
 
 export const LinkIcon = css`

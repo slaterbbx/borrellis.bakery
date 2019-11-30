@@ -4,25 +4,37 @@ import { Link } from 'gatsby'
 
 import Icon from '../../../util/icons/icons'
 
-const MenuContent = ({clicked}) => {
+const MenuContent = ({clicked, path}) => {
 
-  const cockPit = (linkAddress) => {
+	
+	const linkGenerator = (linkAddress) => {
+		let activeLink = false;
+		const pathName = path.substring(1, path.length-1);
+
+		if (linkAddress === pathName){
+			activeLink = true;
+		}
+
      return (
-      <Link to={`/${linkAddress}`} activeClassName="active" onClick={clicked}>
-        {linkAddress}
-        <Icon name={linkAddress} activeClassName="active" styles={Styles.LinkIcon}/>
-      </Link>
+			<Styles.ListItem active={activeLink}>
+				<Link to={`/${linkAddress}`} onClick={clicked}>
+					{linkAddress}
+					<Icon name={linkAddress} styles={Styles.LinkIcon}/>
+				</Link>
+			</Styles.ListItem>
     )
-  }
+	}
+	
+	
 
   return (
     <Styles.Wrapper>
-      <ul>
-        <li>{cockPit("menu")}</li>
-        <li>{cockPit("about")}</li>
-        <li>{cockPit("contact")}</li>
-        <li>{cockPit("wholesale")}</li>
-      </ul>
+      <Styles.ListWrapper>
+        {linkGenerator("menu")}
+        {linkGenerator("about")}
+        {linkGenerator("contact")}
+        {linkGenerator("wholesale")}
+      </Styles.ListWrapper>
     </Styles.Wrapper>
   )
 }
