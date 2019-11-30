@@ -1,13 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
 
 import SEO from '../components/seo'
 import * as Styles from './index-styles'
 import Icon from '../util/icons/icons'
 
+import {GlobalStateContext} from '../components/context/globalContext'
+
+
 const IndexPage = () => {
 
-	// need to setup global state to manage button activity values for animation functionality
-	let temp = true;
+	const state = useContext(GlobalStateContext);
+
+	let temp = state.infoButton;
 
   return (
     <>

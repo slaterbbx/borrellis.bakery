@@ -53,18 +53,20 @@ export const LogoWrapper = styled.div`
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, 250%);
-	transition: 0.6s cubic-bezier(0.25, 0, 0.01, 0.99);
-
+	transform: translate(-50%, -50%) scale(.9);
 	width: 100%;
 	height: 75vh;
+
+	opacity: 0;
+	transition: .9s cubic-bezier(0.25, 0, 0.01, 0.99);
 
 	z-index: 1;
 
 	${({ active }) =>
     active &&
-    css`
-      transform: translate(-50%, -50%);
+		css`
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
     `}
 
 	/* ${media(
