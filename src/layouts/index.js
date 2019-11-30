@@ -7,6 +7,8 @@ import GlobalBaseStyles from '../global/base-styles'
 import Navigation from '../components/navigation/navigation'
 import PageWrapper from '../components/pageWrapper/pageWrapper'
 
+import GlobalContext from '../components/context/globalContext'
+
 const AppWrapper = styled.div`
 	position: relative;
   width: 100%;
@@ -51,7 +53,7 @@ const Layout = ({ children, path }) => {
 
 	return (
 		<ThemeProvider theme={defaultTheme}>
-			<>
+			<GlobalContext>
 				<GlobalBaseStyles />
 				<AppWrapper>
 					<Navigation path={path}/>
@@ -59,7 +61,7 @@ const Layout = ({ children, path }) => {
 						{children}
 					</PageWrapper>
 				</AppWrapper>
-			</>
+			</GlobalContext>
 		</ThemeProvider>
 	)
 }
