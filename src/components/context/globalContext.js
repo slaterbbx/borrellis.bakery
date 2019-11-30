@@ -1,7 +1,7 @@
 import React from 'react'
 
-// const GlobalStateContext = React.createContext()
-// const GlobalDispatchContext = React.createContext()
+export const GlobalStateContext = React.createContext()
+export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
 	menuButton: true,
@@ -26,9 +26,16 @@ const reducer = (state, action) => {
 }
 
 const GlobalContext = ({children}) => {
-	// eslint-disable-next-line
+
 	const [state, dispatch] = React.useReducer(reducer, initialState)
-	return <div>{children}</div>
+
+		return (
+			<GlobalStateContext.Provider value={state}>
+				<GlobalDispatchContext.Provider value={dispatch}>
+					{children}
+				</GlobalDispatchContext.Provider>
+			</GlobalStateContext.Provider>
+		)
 }
 
 export default GlobalContext
