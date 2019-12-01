@@ -6,14 +6,16 @@ export const AboutWrapper = styled.div`
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 70%;
+	opacity: 1;
 
-	transition: 0.6s cubic-bezier(0.25, 0, 0.01, 0.99);
+	transition: 0.9s all .3s cubic-bezier(0.25, 0, 0.01, 0.99);
 
   z-index: 1;
 
 	${({ active }) =>
     active &&
-    css`
+		css`
+			opacity: 0;
       transform: translate(-50%, -250%);
     `}
 
@@ -30,7 +32,7 @@ export const AboutWrapper = styled.div`
 	}
 	
 	.innerWrapper{
-		background-color: ${({theme})=> theme.colorWhite};
+		background-color: ${({theme}) => theme.colorWhite};
 		opacity: .7;
 		font-size: 5rem;
 		font-weight: 300;
@@ -56,7 +58,7 @@ export const LogoWrapper = styled.div`
 	height: 65vh;
 
 	opacity: 0;
-	transition: .9s cubic-bezier(0.25, 0, 0.01, 0.99);
+	transition: .9s all .3s cubic-bezier(0.25, 0, 0.01, 0.99);
 
 	z-index: 1;
 
