@@ -6,7 +6,6 @@ export const AboutWrapper = styled.div`
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 70%;
-	opacity: 1;
 
 	transition: 0.9s all .3s cubic-bezier(0.25, 0, 0.01, 0.99);
 
@@ -15,7 +14,6 @@ export const AboutWrapper = styled.div`
 	${({ active }) =>
     active &&
 		css`
-			opacity: 0;
       transform: translate(-50%, -250%);
     `}
 
