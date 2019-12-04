@@ -49,8 +49,6 @@ const Layout = ({ children, path }) => {
 		}
 	},[background, path, gradiant])
 
-	
-
 	return (
 		<ThemeProvider theme={defaultTheme}>
 			<GlobalContext>
