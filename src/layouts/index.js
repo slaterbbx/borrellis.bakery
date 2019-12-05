@@ -26,15 +26,16 @@ const Layout = ({ children, path }) => {
 	useEffect(()=>{
 		switch (path) {
 			case "/":
+				gradiant[1](true);
 				background[1]('displayCase.jpg');
 				break;
 			case "/menu/":
 				gradiant[1](false);
-				background[1]('bakery.jpg');
+				background[1]('bread.jpg');
 				break;
 			case "/about/":
 				gradiant[1](false);
-				background[1]('bread.jpg');
+				background[1]('bakery.jpg');
 				break;
 			case "/contact/":
 				gradiant[1](false);
@@ -45,9 +46,12 @@ const Layout = ({ children, path }) => {
 				background[1]('carrotCake.jpg')
 				break;
 			default:
+				gradiant[1](true);
 				background[1]('displayCase.jpg')
 		}
-	},[background, path, gradiant])
+	// only runs on change of path props from react
+	// eslint-disable-next-line
+	},[path])
 
 	return (
 		<ThemeProvider theme={defaultTheme}>
