@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Borrelli's Bakery Website`,
     description: `Borrelli's bakery in Providence Rhode island has been making baked goods since 1948`,
-    author: `@slaterbbx`,
+    author: `Lit on fire design`,
   },
   plugins: [
     `gatsby-plugin-layout`,
