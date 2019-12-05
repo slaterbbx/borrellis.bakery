@@ -9,20 +9,20 @@ export const MenuWrapper = styled.div`
   width: 100%;
   height: 100%;
 
+	transition: 0.5s all ease;
+
   overflow: hidden;
   z-index: 2;
 
   ${({ active }) =>
     active &&
     css`
-      transition: 0.5s cubic-bezier(0.25, 0, 0.01, 0.99);
       transform: translateY(0);
     `}
 
   ${({ inactive }) =>
     inactive &&
     css`
-      transition: 0.5s cubic-bezier(0.25, 0, 0.01, 0.99);
       transform: translateY(100%);
     `}
 
@@ -56,8 +56,14 @@ margin-left: 3rem;
 transform: rotate(-15deg);
 width: 62%;
 height: 80%;
+opacity: 0;
+transition: all .8s ease;
 
 z-index: 20;
+
+${({active}) => active && css`
+	opacity: 1;
+`}
 
 ${media(
 	["min-2000"],

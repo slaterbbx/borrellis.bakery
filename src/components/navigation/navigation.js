@@ -58,7 +58,7 @@ const NavMenu = ({path}) => {
         <div className="innerWrapper">
           <Icon name="bread" styles={Styles.BreadIcon} />
           <MenuLinks clicked={menuButtonChangeHandler} path={path}/>
-					<Styles.GalleryWrapper>
+					<Styles.GalleryWrapper active={!state.menuButton}>
 						<GatsbyGallery gallery={gallery}/>
 					</Styles.GalleryWrapper>
 					<NavSocialLinks/>
@@ -68,4 +68,4 @@ const NavMenu = ({path}) => {
   )
 }
 
-export default NavMenu
+export default React.memo(NavMenu)

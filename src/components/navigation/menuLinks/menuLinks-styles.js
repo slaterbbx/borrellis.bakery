@@ -31,13 +31,14 @@ export const ListItem = styled.div`
 		font-family: ${({ theme }) => theme.fontPrimary};
 		letter-spacing: 0.2rem;
 		display: inline-block;
+		user-select: none;
+		text-decoration: none;
 		font-size: 5rem;
 		font-weight: 300;
 		text-shadow: .3rem .2rem .4rem rgb(0,0,0,.1);
 		text-transform: capitalize;
 		padding: 1rem 2rem;
 		color: ${({ theme }) => theme.fontPrimary};
-		text-decoration: none;
 		background-image: linear-gradient(
 			120deg,
 			transparent 0%,
@@ -45,7 +46,7 @@ export const ListItem = styled.div`
 			${({ theme }) => theme.colorWhite} 50%
 		);
 		background-size: 230%;
-		transition: all 0.48s;
+		transition: all 0.6s;
 
 		:hover {
 			background-position: 100%;
