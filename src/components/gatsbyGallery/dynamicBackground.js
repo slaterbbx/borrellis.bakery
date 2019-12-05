@@ -41,8 +41,9 @@ const BackgroundSectionImage = ({ className, src, children }) => {
 const ImageBackground = styled(BackgroundSectionImage)`
   width: 100%;
   height: 100%;
-  background-position: top;
+  background-position: center;
   background-size: cover;
+	background-repeat: no-repeat;
 `
 
 export default ImageBackground
