@@ -32,6 +32,7 @@ export const Title = styled.div`
 	font-size: 10rem;
 	padding: 0 1rem 0 1rem;
 	line-height: .75;
+	user-select: none;
 	font-family: ${({theme}) => theme.fontPrimary};
 	color: ${({theme}) => theme.colorWhite};
 
