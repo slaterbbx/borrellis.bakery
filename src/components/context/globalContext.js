@@ -5,10 +5,10 @@ export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
 	menuButton: true,
-	infoButton: true,
+	infoButton: true
 }
 
-const reducer = (state, action) => {
+const reducer = (state, action, payload) => {
 	switch (action.type) {
 		case "MENU_BUTTON": 
 			return {
