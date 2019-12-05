@@ -4,8 +4,6 @@ const SharedStyles = css`
   position: relative;
   width: 100%;
   height: 100%;
-
-  overflow: hidden;
 `
 const Gradiant = styled.div`
   ${SharedStyles}
@@ -20,7 +18,7 @@ const Gradiant = styled.div`
 `
 const NoGradiant = styled.div`
   ${SharedStyles}
-  background-color: rgb(0,0,0,.65);
+  background-color: rgb(0,0,0,.45);
 `
 // checks if innerGradiant props is set to true or anything else. Sets css based on desired output.
 const styleChecker = isOn => {
