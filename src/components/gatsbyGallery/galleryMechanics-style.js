@@ -52,7 +52,9 @@ export const ButtonsWrapper = styled.div`
 	.arrowWrapper > .button{
 		transition: all .2s ease;
 		transform: translateY(0);
+		opacity: .7;
 		&:hover {
+			opacity: 1;
     	transform: translateY(-.5rem);
   	}
 	}

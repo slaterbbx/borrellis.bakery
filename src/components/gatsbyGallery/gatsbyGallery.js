@@ -15,4 +15,4 @@ const GatsbyGallery = ({gallery})=> {
 	)
 }
 
-export default GatsbyGallery;
+export default React.memo(GatsbyGallery);

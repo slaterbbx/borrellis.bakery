@@ -2,6 +2,7 @@ import React, { useMemo } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
+import {fadeIn} from '../../global/animations'
 
 const BackgroundSectionImage = ({ className, src, children }) => {
   const data = useStaticQuery(graphql`
@@ -44,6 +45,9 @@ const ImageBackground = styled(BackgroundSectionImage)`
   background-position: center;
   background-size: cover;
 	background-repeat: no-repeat;
+
+	animation: ${fadeIn} .5s ease-in;
+	animation-fill-mode: backwards;
 `
 
 export default ImageBackground

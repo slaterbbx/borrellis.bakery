@@ -27,7 +27,7 @@ const svgIcon = props => {
   switch (props.name) {
     case "arrowCircle":
       PropsName = arrowCircle
-      break
+			break
     default:
       PropsName = arrowCircle
   }
