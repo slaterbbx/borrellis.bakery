@@ -5,28 +5,28 @@ module.exports = {
     author: `Lit on fire design`,
   },
   plugins: [
-    `gatsby-plugin-layout`,
+		`gatsby-plugin-layout`,
     {
-      resolve: `gatsby-plugin-styled-components`,
+			resolve: `gatsby-plugin-styled-components`,
       options: {
-        // Use this during production to shorten class names in styled-components
+				// Use this during production to shorten class names in styled-components
         // displayName: false
       },
     },
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet-async`,
     {
-      resolve: `gatsby-source-filesystem`,
+			resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+				name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+			resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+				name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
