@@ -4,8 +4,12 @@
 // [ X ] FIX: Solve issue with opacity on 'about' wrapper so that inner font ( solved with RGB ).
 
 // CREATE: Finish 404 page
-// CREATE: Menu page
+// CREATE: Menu page ( need contentBox mobile design first )
 // CREATE: Wholesale page
 // CREATE: Contact page ( requires hosting on Firebase first and using firebase cloud functions to email )
 
 // IMPORTANT!!! Remove link on home button for info on home page only ( causes glitch - re render )
+
+// CAN START MOBILE ON
+// contentBox ( needed prior to Menu page )
+// Menu
