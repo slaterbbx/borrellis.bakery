@@ -3,66 +3,61 @@ import React, { Component } from "react"
 class Path extends Component {
 
 	state = {
-		counter: 0,
-		fireColor: {
-			fireStop1: '',
-			fireStop2: '',
-			fireStop3: '',
-			fireStop4: '',
-			fireStop5: '',
-			fireStop6: '',
-			fireStop7: '',
-			fireColorArray: ['#E64C43', '#E54A41', '#E54C44', '#DB463E', '#C93831', '#C43730', '#B5322C', '#9C2C26', '#7A221E', '#4D1613', '#180706']
-		}	
+		stopPointIncrementerValue: 0.005,
+		stopPointDirection: 'in'
 	}
 
-	updateStopPointHandler(){
+	updateStopPointHandler(incrementAmount, distance){
 
-		this.setState((prevState, curState) => {
-
-			console.log('running')
-			if ( prevState.counter < 4 ){
-				return {
-					counter: this.state.counter + 1,
-					// fireColor: {
-					// 	fireStop1: this.state.fireColorArray[prevState.counter + 1],
-					// 	fireStop2: this.state.fireColorArray[prevState.counter + 2],
-					// 	fireStop3: this.state.fireColorArray[prevState.counter + 3],
-					// 	fireStop4: this.state.fireColorArray[prevState.counter + 4],
-					// 	fireStop5: this.state.fireColorArray[prevState.counter + 5],
-					// 	fireStop6: this.state.fireColorArray[prevState.counter + 6],
-					// 	fireStop7: this.state.fireColorArray[prevState.counter + 7],
-					// 	fireColorArray: this.state.fireColorArray
-					// }
+		if (this.state.stopPointIncrementerValue <= 0){
+			this.setState(() => {
+				return{
+					stopPointDirection: 'in'
 				}
-			} else if ( this.state.counter === 4 ){
+			})
+		}
+
+		this.setState((prevState) => {
+			const incrementer = prevState.stopPointIncrementerValue;
+			if ( this.state.stopPointDirection === 'in' ){
 				return {
-					counter: 1,
+					stopPointIncrementerValue: incrementer + incrementAmount
+				}
+			} else if ( this.state.stopPointDirection === 'out' ){
+				return {
+					stopPointIncrementerValue: incrementer - incrementAmount
 				}
 			}
 		})
 
+		if (this.state.stopPointIncrementerValue >= distance){
+			this.setState(() => {
+				return{
+					stopPointDirection: 'out'
+				}
+			})
+		}
+	}
+
+	setIntervalHandler(){
+		let	incrementAmount = 0.007;
+		let	distance = 0.071;
+		let	time = 100;
+
+		this.timer = setInterval(() => {
+			this.updateStopPointHandler(incrementAmount, distance)
+		}, time / 1);
 	}
 
 	componentDidMount(){
-		const timer = setInterval(() => {
-			
-			// MEMORY LEAK HERE!!!
-
-			// this.updateStopPointHandler()
-			console.log(this.state.counter)
-
-			console.log('This will run after 3 second!')
-		}, 3000 / 1);
+		this.setIntervalHandler()
 	}
 
 	componentWillUnmount(){
-		// Find out how to unmount the timer properly to stop memory leak on page change
+		clearInterval(this.timer)
 	}
 
-
-	render(){
-				
+	render(){	
 	return (
 		<>
 			<g clipPath="url(#clip0)">
@@ -382,12 +377,12 @@ class Path extends Component {
 				>
 
 					<stop stopColor="#C93831" />
-					<stop offset="0.1167" stopColor="#C43730" />
-					<stop offset="0.2589" stopColor="#B5322C" />
-					<stop offset="0.4143" stopColor="#9C2C26" />
-					<stop offset="0.5793" stopColor="#7A221E" />
-					<stop offset="0.7518" stopColor="#4D1613" />
-					<stop offset="0.928" stopColor="#180706" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.1167} stopColor="#C43730" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.2589} stopColor="#B5322C" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.4143} stopColor="#9C2C26" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.5793} stopColor="#7A221E" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.7518} stopColor="#4D1613" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.928} stopColor="#180706" />
 					<stop offset="1" />
 				</radialGradient>
 				<linearGradient
@@ -399,18 +394,18 @@ class Path extends Component {
 					gradientUnits="userSpaceOnUse"
 				>
 					<stop stopColor="#F18B3B" />
-					<stop offset="0.0246495" stopColor="#EE843A" />
-					<stop offset="0.1559" stopColor="#DE6336" />
-					<stop offset="0.2816" stopColor="#D24B33" />
-					<stop offset="0.3983" stopColor="#CB3D32" />
-					<stop offset="0.4972" stopColor="#C93831" />
-					<stop offset="0.5332" stopColor="#A92F29" />
-					<stop offset="0.5898" stopColor="#7C231E" />
-					<stop offset="0.6488" stopColor="#561815" />
-					<stop offset="0.7096" stopColor="#370F0D" />
-					<stop offset="0.7729" stopColor="#1F0907" />
-					<stop offset="0.8395" stopColor="#0D0403" />
-					<stop offset="0.9117" stopColor="#030101" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.0246495} stopColor="#EE843A" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.1559} stopColor="#DE6336" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.2816} stopColor="#D24B33" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.3983} stopColor="#CB3D32" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.4972} stopColor="#C93831" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.5332} stopColor="#A92F29" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.5898} stopColor="#7C231E" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.6488} stopColor="#561815" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.7096} stopColor="#370F0D" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.7729} stopColor="#1F0907" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.8395} stopColor="#0D0403" />
+					<stop offset={this.state.stopPointIncrementerValue + 0.9117} stopColor="#030101" />
 					<stop offset="1" />
 				</linearGradient>
 				<radialGradient
