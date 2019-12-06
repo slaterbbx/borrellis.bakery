@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 
 import SEO from '../components/seo'
-import * as Styles from '../components/pageStyles/index-styles'
+import * as Styles from '../pageStyles/index-styles'
 import Icon from '../util/icons/icons'
 
 import {GlobalStateContext} from '../components/context/globalContext'
