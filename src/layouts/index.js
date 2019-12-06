@@ -27,7 +27,7 @@ const Layout = ({ children, path }) => {
 	useEffect(()=>{
 		switch (path) {
 			case "/":
-				gradiant[1](true);
+				gradiant[1](false);
 				background[1]('displayCase.jpg');
 				break;
 			case "/menu/":
