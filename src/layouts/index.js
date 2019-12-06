@@ -28,7 +28,7 @@ const Layout = ({ children, path }) => {
 		switch (path) {
 			case "/":
 				gradiant[1](false);
-				background[1]('displayCase.jpg');
+				background[1]('case-bg.jpg');
 				break;
 			case "/menu/":
 				gradiant[1](false);
