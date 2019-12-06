@@ -49,6 +49,7 @@ export const BoxContent = styled.div`
 	letter-spacing: 1px;
 	border-radius: 1rem;
 	background-color: ${({theme}) => theme.colorWhite};
+	box-shadow: 0 5rem 8rem rgb(0, 0, 0, .3);
 
 	${({opacity}) => opacity && css`
 		background-color: ${opacity};
