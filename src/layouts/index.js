@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { defaultTheme } from '../global/base-theme'
 import GlobalBaseStyles from '../global/base-styles'
+import { HelmetProvider } from 'react-helmet-async';
 
 import Navigation from '../components/navigation/navigation'
 import PageWrapper from '../components/pageWrapper/pageWrapper'
@@ -54,17 +55,19 @@ const Layout = ({ children, path }) => {
 	},[path])
 
 	return (
-		<ThemeProvider theme={defaultTheme}>
-			<GlobalContext>
-				<GlobalBaseStyles />
-				<AppWrapper>
-					<Navigation path={path}/>
-					<PageWrapper src={background[0]} gradiant={gradiant[0]}>
-						{children}
-					</PageWrapper>
-				</AppWrapper>
-			</GlobalContext>
-		</ThemeProvider>
+			<ThemeProvider theme={defaultTheme}>
+				<GlobalContext>
+					<GlobalBaseStyles />
+					<AppWrapper>
+						<Navigation path={path}/>
+						<HelmetProvider>
+							<PageWrapper src={background[0]} gradiant={gradiant[0]}>
+								{children}
+							</PageWrapper>
+						</HelmetProvider>
+					</AppWrapper>
+				</GlobalContext>
+			</ThemeProvider>
 	)
 }
 
