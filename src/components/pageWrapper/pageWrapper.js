@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
 import StyleChecker from "./pageWrapper-style"
+import {fadeIn} from '../../global/animations'
 
 const BackgroundSection = ({ className, src, gradiant, children }) => {
   const data = useStaticQuery(graphql`
@@ -50,6 +51,9 @@ const pageWrapper = styled(BackgroundSection)`
   background-size: cover;
 	background-repeat: no-repeat;
   background-attachment: fixed;
+
+	animation: ${fadeIn} .5s ease-in;
+	animation-fill-mode: backwards;
 `
 
 export default pageWrapper
