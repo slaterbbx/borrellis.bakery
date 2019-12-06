@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
     box-sizing: border-box;
-    background-color: ${({ theme }) => theme.colorPrimary};
+    background-color: black;
     font-family: ${({ theme }) => theme.fontSecondary};
     font-size: 2rem;
     color: ${({ theme }) => theme.colorDarkGrey};
