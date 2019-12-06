@@ -12,7 +12,7 @@
     "gatsby-plugin-layout": "^1.1.6",
     "gatsby-plugin-manifest": "^2.2.13",
     "gatsby-plugin-offline": "^2.2.10",
-    "gatsby-plugin-react-helmet": "^3.1.6",
+    "gatsby-plugin-react-helmet-async": "^1.0.12",
     "gatsby-plugin-sharp": "^2.2.19",
     "gatsby-plugin-styled-components": "^3.1.0",
     "gatsby-source-filesystem": "^2.1.21",
@@ -21,10 +21,11 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1",
+    "react-helmet-async": "^1.0.4",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "@hot-loader/react-dom": "^16.11.0",
     "prettier": "^1.18.2"
   },
   "keywords": [
