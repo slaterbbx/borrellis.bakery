@@ -44,6 +44,9 @@ export const LogoWrapper = styled.div`
 	opacity: 0;
 	transition: .9s all .3s cubic-bezier(0.25, 0, 0.01, 0.99);
 
+	/* fixes glitch in firefox with animation  */
+	backface-visibility: hidden;
+
 	z-index: 1;
 
 	animation: ${fadeIn} 1s ease-in;
