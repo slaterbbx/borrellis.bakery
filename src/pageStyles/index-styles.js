@@ -21,14 +21,15 @@ export const InfoWrapper = styled.div`
 	transform: translate(0, 0);
 	width: 100%;
 	height: 100%;
+	opacity: 1;
 
   z-index: 0;
 
 	${({ active }) =>
     active &&
 		css`
-		/* moves contentBox off page */
-      transform: translate(0, -250%);
+			opacity: 0;
+			transform: translate(0, -250%);
     `}
 `
 
@@ -63,7 +64,7 @@ export const LogoWrapper = styled.div`
 
 	filter: drop-shadow( 0 2.5rem .6rem rgba(0, 0, 0, .5));
 
-	opacity: 0;
+	opacity: 1;
 	transition: .9s all .3s cubic-bezier(0.25, 0, 0.01, 0.99);
 
 	/* fixes glitch in firefox with animation  */
@@ -77,7 +78,7 @@ export const LogoWrapper = styled.div`
 	${({ active }) =>
     active &&
 		css`
-			opacity: 1;
+			opacity: 0;
     `}
 `
 
