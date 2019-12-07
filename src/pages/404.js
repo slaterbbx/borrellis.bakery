@@ -1,6 +1,7 @@
 import React from 'react'
 
 import SEO from "../components/seo"
+import PageWrapper from '../components/pageElements/pageWrapper/pageWrapper'
 
 const Four0four = ()=> {
 
@@ -8,9 +9,11 @@ const Four0four = ()=> {
 	return (
 		<>
 		<SEO title="404" />
-		<p>
-			test
-		</p>
+		<PageWrapper src='bread.jpg'>
+			<p>
+				test
+			</p>
+		</PageWrapper>
 		</>
 	)
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import SEO from "../components/seo"
+import PageWrapper from '../components/pageElements/pageWrapper/pageWrapper'
 
 const Menu = ()=> {
 
@@ -8,9 +9,11 @@ const Menu = ()=> {
 	return (
 		<>
 		<SEO title="Menu" />
-		<p>
-			test
-		</p>
+		<PageWrapper src='bread.jpg'>
+			<p>
+				test
+			</p>
+		</PageWrapper>
 		</>
 	)
 }
