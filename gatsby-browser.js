@@ -13,3 +13,17 @@ export const onClientEntry = () => {
     console.log(`# IntersectionObserver is polyfilled!`)
   }
 }
+
+// EXAMPLE 
+// https://til.hashrocket.com/posts/qm5abe6ay8-wrap-the-root-of-a-gatsby-app-in-a-component
+
+// import React from 'react';
+// import { Provider } from 'react-redux';
+
+// import store from './src/store';
+
+// export const wrapRootElement = ({ element }) => {
+//   return (
+//     <Provider store={store}>{element}</Provider>
+//   );
+// }
