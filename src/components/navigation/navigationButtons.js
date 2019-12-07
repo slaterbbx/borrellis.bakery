@@ -11,13 +11,13 @@ const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isH
 				<Icon name="home" styles={Styles.Icon} viewbox="0 0 42 32" />
 			</Styles.HomeButton>
 		</Link>
-	)
+	);
 
 	let infoButton = (
 		<Styles.HomeButton onClick={clickedInfoButton} active={true}>
 			<Icon name="about" styles={Styles.Icon} viewbox="0 0 32 32"/>
 		</Styles.HomeButton>
-	)
+	);
 	
 	if ( isHomePage === true){
 		homeButton = (
@@ -26,12 +26,12 @@ const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isH
 					<Icon name="home" styles={Styles.Icon} viewbox="0 0 42 32" />
 				</Styles.HomeButton>
 			</Link>
-		)
+		);
 		infoButton = (
 			<Styles.HomeButton onClick={clickedInfoButton} active={infoButtonState}>
 				<Icon name="about" styles={Styles.Icon} viewbox="0 0 32 32"/>
 			</Styles.HomeButton>
-		)
+		);
 	}
 
 	return (
@@ -44,9 +44,8 @@ const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isH
     </Styles.NavButton>
 
 		<Styles.HomeButtonWrapper>
-		{/* design link start and stop to be set to null when home page is true */}
-		{homeButton}
-		{infoButton}
+			{homeButton}
+			{infoButton}
 		</Styles.HomeButtonWrapper>
 
   </Styles.NavButtonWrapper>
