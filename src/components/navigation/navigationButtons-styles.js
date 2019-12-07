@@ -169,6 +169,7 @@ export const HomeButton = styled.div`
   cursor: pointer;
   filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
 	transition: all .6s ease;
+	transform: translateX(0);
 
 	height: 7rem;
 	z-index: 3;

@@ -29,17 +29,13 @@ const NavMenu = ({path}) => {
 	// Simple handler that switchs the menu button clicked state boolean value onClick events
   const menuButtonChangeHandler = () => {
 		dispatch({type: 'MENU_BUTTON'})
+		// console.log('clicked')
 	}
 	
 	// Simple handler that switchs the info button clicked state boolean value onClick events
   const infoButtonChangeHandler = () => {
 		dispatch({type: 'INFO_BUTTON'})
-	}
-
-	// Checks if current page is root path based on props passed down from layouts/index.js
-	let isHomePage = false;
-	if ( path === '/' ){
-		isHomePage = true;
+		// console.log('clicked')
 	}
 
   return (
@@ -49,7 +45,7 @@ const NavMenu = ({path}) => {
         inactive={state.menuButton}
 				clickedNavButton={menuButtonChangeHandler}
 				clickedInfoButton={infoButtonChangeHandler}
-				isHomePage={isHomePage}
+				isHomePage={state.isHomePage}
 				infoButtonState={infoButtonState}
 				dispatch={dispatch}
       />
