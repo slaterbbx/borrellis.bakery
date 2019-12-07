@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import NavigationButtons from './navigationButtons'
 import Icon from '../../util/icons/icons'
-import * as Styles from './navigation-styles'
+import { MenuWrapper, GalleryWrapper, BreadIcon } from './navigation-styles'
 import MenuLinks from './menuLinks/menuLinks'
 import GatsbyGallery from '../gatsbyGallery/gatsbyGallery'
 
@@ -50,16 +50,16 @@ const NavMenu = ({path}) => {
 				dispatch={dispatch}
       />
 
-      <Styles.MenuWrapper active={!state.menuButton} inactive={state.menuButton}>
+      <MenuWrapper active={!state.menuButton} inactive={state.menuButton}>
         <div className="innerWrapper">
-          <Icon name="bread" styles={Styles.BreadIcon} />
+          <Icon name="bread" styles={BreadIcon} />
           <MenuLinks clicked={menuButtonChangeHandler} path={path}/>
-					<Styles.GalleryWrapper active={!state.menuButton}>
+					<GalleryWrapper active={!state.menuButton}>
 						<GatsbyGallery gallery={gallery}/>
-					</Styles.GalleryWrapper>
+					</GalleryWrapper>
 					<NavSocialLinks/>
         </div>
-      </Styles.MenuWrapper>
+      </MenuWrapper>
     </>
   )
 }
