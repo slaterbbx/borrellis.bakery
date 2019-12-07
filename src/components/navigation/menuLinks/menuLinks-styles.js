@@ -62,6 +62,7 @@ export const LinkWrapper = styled.div`
 		cursor: default;
 		opacity: .3;
 		text-shadow: .3rem .2rem .4rem rgb(0,0,0,0);
+		transform: translateX(0);
 	}
 `
 

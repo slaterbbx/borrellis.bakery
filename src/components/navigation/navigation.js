@@ -41,8 +41,8 @@ const NavMenu = ({path}) => {
   return (
     <>
       <NavigationButtons
-        active={!state.menuButton}
-        inactive={state.menuButton}
+        active={state.menuButton}
+        inactive={!state.menuButton}
 				clickedNavButton={menuButtonChangeHandler}
 				clickedInfoButton={infoButtonChangeHandler}
 				isHomePage={state.isHomePage}
@@ -50,11 +50,11 @@ const NavMenu = ({path}) => {
 				dispatch={dispatch}
       />
 
-      <MenuWrapper active={!state.menuButton} inactive={state.menuButton}>
+      <MenuWrapper active={state.menuButton} inactive={!state.menuButton}>
         <div className="innerWrapper">
           <Icon name="bread" styles={BreadIcon} />
           <MenuLinks clicked={menuButtonChangeHandler} path={path}/>
-					<GalleryWrapper active={!state.menuButton}>
+					<GalleryWrapper active={state.menuButton}>
 						<GatsbyGallery gallery={gallery}/>
 					</GalleryWrapper>
 					<NavSocialLinks/>
