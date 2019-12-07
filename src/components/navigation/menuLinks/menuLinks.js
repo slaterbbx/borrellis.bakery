@@ -6,6 +6,7 @@ import Icon from '../../../util/icons/icons'
 
 const MenuContent = ({clicked}) => {
 	
+	// Generats the link list item with the name of the page
 	const linkGenerator = (linkAddress) => {
      return (
 			<LinkWrapper>
