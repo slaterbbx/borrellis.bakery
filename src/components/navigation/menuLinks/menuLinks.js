@@ -8,12 +8,12 @@ const MenuContent = ({clicked}) => {
 	
 	// Generats the link list item with the name of the page
 	const linkGenerator = (linkAddress) => {
-     return (
+    return (
 			<LinkWrapper>
-					<Link to={`/${linkAddress}`} activeClassName="activeLink" onClick={clicked}>
-						{linkAddress}
-						<Icon name={linkAddress} styles={LinkIcon}/>
-					</Link>
+				<Link to={`/${linkAddress}`} activeClassName="activeLink" onClick={clicked}>
+					{linkAddress}
+					<Icon name={linkAddress} styles={LinkIcon}/>
+				</Link>
 			</LinkWrapper>
     )
 	}
