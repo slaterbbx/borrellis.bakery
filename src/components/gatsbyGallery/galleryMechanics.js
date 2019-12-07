@@ -6,21 +6,23 @@ import { GalleryWrapper, ButtonsWrapper, ArrowLeft, ArrowRight, ImageWrapper } f
 import BackgroundImage from "./dynamicBackground"
 
 const GalleryMechanics = ({children, gallery}) => {
-	let imageCountTicker = useState(1)
-	let currentImage = gallery[imageCountTicker[0] - 1]
+	let imgNum = useState(1);
+	const changeCount = imgNum[1];
+	const imageCount = imgNum[0];
+	let currentImage = gallery[imgNum[0] - 1];
 
   const ImageSelectorHandler = direction => {
     if (direction === "right") {
-      imageCountTicker[1](imageCountTicker[0] + 1)
+      changeCount(imageCount + 1)
     } else if (direction === "left") {
-      imageCountTicker[1](imageCountTicker[0] - 1)
+      changeCount(imageCount - 1)
     }
-    if (imageCountTicker[0] > gallery.length) {
+    if (imageCount > gallery.length) {
       currentImage = gallery[0]
-      imageCountTicker[1](1)
-    } else if (imageCountTicker[0] < 1) {
+      changeCount(1)
+    } else if (imageCount < 1) {
       currentImage = gallery[gallery.length - 1]
-      imageCountTicker[1](gallery.length)
+      changeCount(gallery.length)
 		}
 		return <BackgroundImage src={`${currentImage}.jpg`}>{children}</BackgroundImage>
 	}
