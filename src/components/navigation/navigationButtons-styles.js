@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import media from '../../util/mediaQuery'
 
 const buttonLineSize = css`
   width: 4rem;
@@ -20,14 +19,6 @@ export const NavButtonWrapper = styled.div`
   right: 2rem;
   display: flex;
   flex-direction: column;
-
-	/* ${media(
-      ["min-2000"],
-      css`
-        top: 3rem;
-  			right: 3rem;
-      `
-    )} */
 `
 
 export const NavButton = styled.div`
@@ -44,14 +35,6 @@ export const NavButton = styled.div`
     height: 7rem;
     width: 7rem;
     cursor: pointer;
-
-    /* ${media(
-      ["min-800"],
-      css`
-        height: 8rem;
-        width: 8rem;
-      `
-    )} */
   }
 
   .icon-x {
