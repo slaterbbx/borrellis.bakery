@@ -7,12 +7,14 @@ const GalleryWrapper = styled.div`
 	height: 100%;
 `
 
-const GatsbyGallery = ({gallery})=> {
+const GatsbyGallery = ({children, gallery, globalGallery})=> {
 	return (
 		<GalleryWrapper>
-			<GalleryMechanics gallery={gallery} />
+			<GalleryMechanics gallery={gallery} globalGallery={globalGallery}>
+				{children}
+			</GalleryMechanics>
 		</GalleryWrapper>
 	)
 }
 
-export default React.memo(GatsbyGallery);
+export default GatsbyGallery;

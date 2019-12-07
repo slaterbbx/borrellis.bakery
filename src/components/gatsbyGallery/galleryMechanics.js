@@ -5,11 +5,11 @@ import Icon from "./icons/icons"
 import * as Styles from "./galleryMechanics-style"
 import BackgroundImage from "./dynamicBackground"
 
-const GalleryMechanics = ({gallery}) => {
+const GalleryMechanics = ({children, gallery}) => {
 	let imageCountTicker = useState(1)
 	let currentImage = gallery[imageCountTicker[0] - 1]
 
-  const ImageSelector = direction => {
+  const ImageSelectorHandler = direction => {
     if (direction === "right") {
       imageCountTicker[1](imageCountTicker[0] + 1)
     } else if (direction === "left") {
@@ -21,24 +21,24 @@ const GalleryMechanics = ({gallery}) => {
     } else if (imageCountTicker[0] < 1) {
       currentImage = gallery[gallery.length - 1]
       imageCountTicker[1](gallery.length)
-    }
-    return <BackgroundImage src={`${currentImage}.jpg`} />
-  }
+		}
+		return <BackgroundImage src={`${currentImage}.jpg`}>{children}</BackgroundImage>
+	}
 
   return (
 		<Styles.GalleryWrapper>
       <Styles.ImageWrapper>
-				<ImageSelector />
+				<ImageSelectorHandler/>
       </Styles.ImageWrapper>
 
       <Styles.ButtonsWrapper>
 				<div className="arrowWrapper">
-					<div className="button" onClick={ImageSelector.bind(null, "left")}>
+					<div className="button" onClick={ImageSelectorHandler.bind(null, "left")}>
 						<Icon name="arrowCircle" styles={Styles.ArrowLeft} />
 					</div>
 				</div>
 				<div className="arrowWrapper">
-					<div className="button" onClick={ImageSelector.bind(null, "right")}>
+					<div className="button" onClick={ImageSelectorHandler.bind(null, "right")}>
 						<Icon name="arrowCircle" styles={Styles.ArrowRight} />
 					</div>
 				</div>

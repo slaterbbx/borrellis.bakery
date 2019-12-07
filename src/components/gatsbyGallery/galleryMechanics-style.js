@@ -14,8 +14,6 @@ export const ImageWrapper = styled.div`
 	padding: 3rem;
 	border-radius: 1rem;
   box-shadow: 4rem 5rem 20rem rgb(255, 255, 255, 0.3);
-
-  z-index: 5;
 `
 
 export const ArrowSharedStyles = css`
