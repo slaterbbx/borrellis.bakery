@@ -34,17 +34,17 @@ export const SocialIcon = css`
 `
 
 const socialLinks = ()=> (
-		<SocialWrapper>
-			<div className="iconWrapper">
-				<Icon name="yelp" styles={SocialIcon}/>
-			</div>
-			<div className="iconWrapper">
-				<Icon name="facebook" styles={SocialIcon}/>
-			</div>
-			<div className="iconWrapper">
-				<Icon name="instagram" styles={SocialIcon}/>
-			</div>
-		</SocialWrapper>
+	<SocialWrapper>
+		<div className="iconWrapper">
+			<Icon name="yelp" styles={SocialIcon}/>
+		</div>
+		<div className="iconWrapper">
+			<Icon name="facebook" styles={SocialIcon}/>
+		</div>
+		<div className="iconWrapper">
+			<Icon name="instagram" styles={SocialIcon}/>
+		</div>
+	</SocialWrapper>
 	)
 
 export default socialLinks
