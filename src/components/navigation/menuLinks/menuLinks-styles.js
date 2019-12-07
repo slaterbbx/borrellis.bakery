@@ -24,10 +24,11 @@ export const ListWrapper = styled.div`
 	backface-visibility: hidden;
 `
 
-export const ListItem = styled.div`
+export const LinkWrapper = styled.div`
+
 	a, a:visited{
-		color: ${({ theme }) => theme.colorWhite};
 		cursor: pointer;
+		color: ${({ theme }) => theme.colorWhite};
 		font-family: ${({ theme }) => theme.fontPrimary};
 		letter-spacing: 0.2rem;
 		display: inline-block;
@@ -38,7 +39,7 @@ export const ListItem = styled.div`
 		text-shadow: .3rem .2rem .4rem rgb(0,0,0,.1);
 		text-transform: capitalize;
 		padding: 1rem 2rem;
-		color: ${({ theme }) => theme.fontPrimary};
+		/* color: ${({ theme }) => theme.fontPrimary}; */
 		background-image: linear-gradient(
 			120deg,
 			transparent 0%,
@@ -54,22 +55,13 @@ export const ListItem = styled.div`
 			transform: translateX(1rem);
 		}
 
-		${({ active }) =>
-    active &&
-			css`
-			cursor: default;
-			opacity: .3;
-			color: ${({ theme }) => theme.colorBrandRed};
-			background-position: 100%;
-
-			:hover {
-				transform: translateX(0);
-			}
-		`}
+		margin-bottom: 1rem;
 	}
 
-	&:not(:last-child) {
-		margin-bottom: 1rem;
+	.activeLink{
+		cursor: default;
+		opacity: .3;
+		text-shadow: .3rem .2rem .4rem rgb(0,0,0,0);
 	}
 `
 
