@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import Icon from "./icons/icons"
 
-import * as Styles from "./galleryMechanics-style"
+import { GalleryWrapper, ButtonsWrapper, ArrowLeft, ArrowRight, ImageWrapper } from "./galleryMechanics-style"
 import BackgroundImage from "./dynamicBackground"
 
 const GalleryMechanics = ({children, gallery}) => {
@@ -26,24 +26,24 @@ const GalleryMechanics = ({children, gallery}) => {
 	}
 
   return (
-		<Styles.GalleryWrapper>
-      <Styles.ImageWrapper>
+		<GalleryWrapper>
+      <ImageWrapper>
 				<ImageSelectorHandler/>
-      </Styles.ImageWrapper>
+      </ImageWrapper>
 
-      <Styles.ButtonsWrapper>
+      <ButtonsWrapper>
 				<div className="arrowWrapper">
 					<div className="button" onClick={ImageSelectorHandler.bind(null, "left")}>
-						<Icon name="arrowCircle" styles={Styles.ArrowLeft} />
+						<Icon name="arrowCircle" styles={ArrowLeft} />
 					</div>
 				</div>
 				<div className="arrowWrapper">
 					<div className="button" onClick={ImageSelectorHandler.bind(null, "right")}>
-						<Icon name="arrowCircle" styles={Styles.ArrowRight} />
+						<Icon name="arrowCircle" styles={ArrowRight} />
 					</div>
 				</div>
-      </Styles.ButtonsWrapper>
-    </Styles.GalleryWrapper>
+      </ButtonsWrapper>
+    </GalleryWrapper>
   )
 }
 
