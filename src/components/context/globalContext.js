@@ -5,10 +5,11 @@ export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
 	menuButton: true,
-	infoButton: true
+	infoButton: false,
+	isHomePage: false
 }
 
-const reducer = (state, action, payload) => {
+const reducer = (state, action) => {
 	switch (action.type) {
 		case "MENU_BUTTON": 
 			return {
@@ -19,6 +20,11 @@ const reducer = (state, action, payload) => {
 			return {
 				...state,
 				infoButton: !state.infoButton
+			}
+		case "IS_HOME":
+			return {
+				...state,
+				isHomePage: action.payload
 			}
 		default:
 			console.log('Bad Action Type')
