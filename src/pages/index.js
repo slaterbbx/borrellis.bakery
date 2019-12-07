@@ -7,7 +7,6 @@ import {FloatFrame, VerticleCenter, LogoWrapper, Logo, InfoWrapper} from '../pag
 import ContentBox from '../components/pageElements/contentBox/contentBox'
 import Icon from '../util/icons/icons'
 
-
 const IndexPage = () => {
 
 	// Global Context state checks boolean value of infoButton for true / false
