@@ -9,7 +9,7 @@ const Four0four = ()=> {
 	return (
 		<>
 		<SEO title="404" />
-		<PageWrapper src='bread.jpg'>
+		<PageWrapper src='bread.jpg' tint={true} fadeAnim={true}>
 			<p>
 				test
 			</p>

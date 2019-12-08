@@ -9,7 +9,7 @@ const Menu = ()=> {
 	return (
 		<>
 		<SEO title="Menu" />
-		<PageWrapper src='bread.jpg'>
+		<PageWrapper src='bread.jpg' tint={true} fadeAnim={true}>
 			<p>
 				test
 			</p>

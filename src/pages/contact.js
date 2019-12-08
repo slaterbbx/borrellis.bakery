@@ -8,7 +8,7 @@ const Contact = ()=> {
 	return (
 		<>
 		<SEO title="Contact" />
-		<PageWrapper src='bread.jpg'>
+		<PageWrapper src='bread.jpg' tint={true} fadeAnim={true}>
 			<p>
 				test
 			</p>
