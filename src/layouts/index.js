@@ -15,7 +15,6 @@ const AppWrapper = styled.div`
 
   overflow: hidden;
 `
-
 const Layout = ({ children, path }) => {
 
 	// Page background state ( changes with page address )
@@ -58,7 +57,7 @@ const Layout = ({ children, path }) => {
 				<GlobalBaseStyles />
 				<AppWrapper>
 					<HelmetProvider>
-					<Navigation path={path}/>
+					<Navigation/>
 						{children}
 					</HelmetProvider>
 				</AppWrapper>
