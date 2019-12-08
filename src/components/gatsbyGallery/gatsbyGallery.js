@@ -17,4 +17,4 @@ const GatsbyGallery = ({children, gallery, globalGallery})=> {
 	)
 }
 
-export default GatsbyGallery;
+export default React.memo(GatsbyGallery);
