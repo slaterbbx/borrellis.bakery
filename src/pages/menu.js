@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SEO from "../components/seo"
-import PageWrapper from '../components/pageElements/pageWrapper/pageWrapper'
+import PageWrapper from '../util/pageWrapper/pageWrapper'
 
 const Menu = ()=> {
 

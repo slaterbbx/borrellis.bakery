@@ -2,7 +2,7 @@ import React from 'react'
 
 import SEO from "../components/seo"
 import ContentBox from '../components/pageElements/contentBox/contentBox'
-import PageWrapper from '../components/pageElements/pageWrapper/pageWrapper'
+import PageWrapper from '../util/pageWrapper/pageWrapper'
 
 const About = ()=> {
 

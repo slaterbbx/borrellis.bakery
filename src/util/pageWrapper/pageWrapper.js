@@ -1,6 +1,6 @@
 import React from "react"
-import DynamicImage from '../../../util/dynamicImage/dynamicImage'
-import VerticleScroll from '../../../util/verticleScroll'
+import DynamicImage from '../dynamicImage/dynamicImage'
+import VerticleScroll from '../verticleScroll'
 
 const pageWrapper = ({src, tint, fadeAnim, children}) =>{
 	return(

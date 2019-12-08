@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from 'react'
 
 import {GlobalStateContext, GlobalDispatchContext} from '../components/context/globalContext'
 import SEO from '../components/seo'
-import PageWrapper from '../components/pageElements/pageWrapper/pageWrapper'
+import PageWrapper from '../util/pageWrapper/pageWrapper'
 import {FloatFrame, VerticleCenter, LogoWrapper, Logo, InfoWrapper} from '../pageStyles/index-styles'
 import ContentBox from '../components/pageElements/contentBox/contentBox'
 import Icon from '../util/icons/icons'
