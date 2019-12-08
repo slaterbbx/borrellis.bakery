@@ -6,8 +6,8 @@ export const Wrapper = styled.nav`
   left: 0;
   height: 100vh;
   width: 100%;
+
   z-index: 4;
-  transition: transform 1s cubic-bezier(1, -0.22, 0.34, 1.52), opacity 1s;
 `
 
 export const ListWrapper = styled.div`
@@ -36,7 +36,7 @@ export const LinkWrapper = styled.div`
 		text-decoration: none;
 		font-size: 5rem;
 		font-weight: 300;
-		text-shadow: .3rem .2rem .4rem rgb(0,0,0,.1);
+		text-shadow: .3rem .2rem .4rem rgba(0,0,0,.1);
 		text-transform: capitalize;
 		padding: 1rem 2rem;
 		/* color: ${({ theme }) => theme.fontPrimary}; */
@@ -47,12 +47,12 @@ export const LinkWrapper = styled.div`
 			${({ theme }) => theme.colorWhite} 50%
 		);
 		background-size: 230%;
-		transition: all 0.6s;
+		transition: all 0.6s ease-out;
 
 		:hover {
 			background-position: 100%;
 			color: ${({ theme }) => theme.colorBrandRed};
-			transform: translateX(1rem);
+			transition: transform 1s cubic-bezier(1, -0.22, 0.34, 1.52), opacity 1s;
 		}
 
 		margin-bottom: 1rem;
@@ -61,7 +61,7 @@ export const LinkWrapper = styled.div`
 	.activeLink{
 		cursor: default;
 		opacity: .3;
-		text-shadow: .3rem .2rem .4rem rgb(0,0,0,0);
+		text-shadow: .3rem .2rem .4rem rgba(0,0,0,0);
 		transform: translateX(0);
 	}
 `
@@ -71,7 +71,7 @@ export const LinkIcon = css`
 	margin-left: 2rem;
 
 	color: inherit;
-	filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
+	filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.2));
 	
 	&:last-child{
 		margin-right: 1rem;

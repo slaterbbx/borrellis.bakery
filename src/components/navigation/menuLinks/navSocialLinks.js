@@ -30,7 +30,7 @@ const SocialWrapper = styled.div`
 export const SocialIcon = css`
 	width: 100%;
 	color: ${({theme}) => theme.colorWhite};
-	filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
+	filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.2));
 `
 
 const socialLinks = ()=> (

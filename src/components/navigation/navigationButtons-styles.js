@@ -24,7 +24,7 @@ export const NavButtonWrapper = styled.div`
 export const NavButton = styled.div`
   background-color: ${({ theme }) => theme.colorBrandRed};
   border-radius: 100%;
-  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease;
 
   z-index: 3;
@@ -150,7 +150,7 @@ export const HomeButton = styled.div`
 	position: absolute;
 	width: 100%;
   cursor: pointer;
-  filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.2));
+  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.2));
 	transition: all .6s ease;
 	transform: translateX(0);
 
