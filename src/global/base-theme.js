@@ -11,4 +11,5 @@ export const defaultTheme = {
   colorDarkerGrey: "#212121",
 
 	colorWhite: "#fff",
+	colorWhitePeach: "#EFC8C7",
 }
