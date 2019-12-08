@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components'
 const ScrollableWrapper = styled.div`
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
 
