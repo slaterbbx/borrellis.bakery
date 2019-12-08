@@ -1,26 +1,35 @@
 import React from 'react'
-import * as Styled from './contentBox-styles'
+import { ComponentVerticleCenter, ComponentWrapper, BoxWrapper, ContentWrapper, ContentCopy, ImageWrapper, Title } from './contentBox-styles'
+import DynamicImage from '../../../util/dynamicImage/dynamicImage'
 
 const contentBox = ({children, verticleCenter, opacity, titleAlignment, width, title}) => {
 
 	let contentBoxOpacity = `rgba(255, 255, 255, ${opacity})`;
 
+	//  ComponentVerticleCenter, ComponentWrapper, BoxWrapper, Title 
 	return (
-		<Styled.ComponentVerticleCenter active={verticleCenter} >
-			<Styled.ComponentWrapper>
-				<Styled.BoxWrapper width={width}>
-					<Styled.Title
+		<ComponentVerticleCenter active={verticleCenter} >
+			<ComponentWrapper>
+				<BoxWrapper width={width}>
+					<Title
 					opacity={opacity}
 					titleAlignment={titleAlignment}>
 						{title}
-					</Styled.Title>
-					<Styled.BoxContent opacity={contentBoxOpacity}>
-						{children}
-					</Styled.BoxContent>
-				</Styled.BoxWrapper>
-			</Styled.ComponentWrapper>
-		</Styled.ComponentVerticleCenter>
+					</Title>
+
+					<ContentWrapper opacity={contentBoxOpacity}>
+						<ContentCopy>
+							{children}
+						</ContentCopy>
+						<ImageWrapper>
+							<DynamicImage src="displayCase.jpg" />
+						</ImageWrapper>
+					</ContentWrapper>
+
+				</BoxWrapper>
+			</ComponentWrapper>
+		</ComponentVerticleCenter>
 	)
 }
 
-export default contentBox;
+export default React.memo(contentBox);

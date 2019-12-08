@@ -29,9 +29,9 @@ export const BoxWrapper = styled.div`
 
 export const Title = styled.div`
 	display: block;
-	font-size: 10rem;
+	font-size: 16rem;
 	padding: 0 1rem 0 1rem;
-	line-height: .75;
+	line-height: .8;
 	user-select: none;
 	font-family: ${({theme}) => theme.fontPrimary};
 	color: ${({theme}) => theme.colorWhite};
@@ -42,11 +42,12 @@ export const Title = styled.div`
 	`}
 `
 
-export const BoxContent = styled.div`
-	display: block;
-	padding: 5.5rem 6.5rem 5.5rem 6.5rem;
-	font-size: 3rem;
-	letter-spacing: 1px;
+export const ContentWrapper = styled.div`
+	display: flex;
+	flex-basis: auto;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	border-radius: 1rem;
 	background-color: ${({theme}) => theme.colorWhite};
 	box-shadow: 0 5rem 8rem rgb(0, 0, 0, .3);
@@ -54,4 +55,20 @@ export const BoxContent = styled.div`
 	${({opacity}) => opacity && css`
 		background-color: ${opacity};
 	`}
+`
+
+export const ImageWrapper = styled.div`
+	flex: 1 0 40%;
+	min-height: 0vh;
+	max-height: 100vh;
+`
+
+export const ContentCopy = styled.div`
+	width: 100%;
+	height: 100%;
+	padding: 5.5rem 6.5rem 5.5rem 6.5rem;
+	font-size: 2.4rem;
+	letter-spacing: 1px;
+
+	hyphens: auto;
 `
