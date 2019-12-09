@@ -8,6 +8,8 @@ before_script:
   - cd functions && npm install
   - cd ../
 script:
+  # Clear any old cache. from gatsby via old build ( Know issue with the cache files )
+  - npm run clean
   - npm run build
   - firebase deploy --only hosting,functions --token "$FIREBASE_TOKEN"
 branches:
