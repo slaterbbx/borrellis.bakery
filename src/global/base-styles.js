@@ -32,11 +32,16 @@ const GlobalStyle = createGlobalStyle`
     }
   
       h1, h2, h3, h4, h5, h6 {
+				color: ${({ theme }) => theme.colorLightGrey};
 				font-family: ${({ theme }) => theme.fontPrimary};
-				font-weight: 900;
-        font-variant: small-caps;
+				font-weight: 700;
       }
     }
+
+		::selection {
+			background-color: ${({theme}) => theme.colorMedGrey};
+			color: ${({theme}) => theme.colorWhite};
+		}
 `
 
 export default GlobalStyle

@@ -9,6 +9,7 @@ export const defaultTheme = {
 
   colorDarkGrey: "#313131",
   colorDarkerGrey: "#212121",
+  colorMedGrey: "#3F3F3F",
 
 	colorWhite: "#fff",
 	colorWhitePeach: "#EFC8C7",
