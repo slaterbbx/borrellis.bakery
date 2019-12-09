@@ -2,14 +2,26 @@ Brand Name and LOGO™ are the sole property of the Borrelli Family Rhode Island
 Photographs (c) property of the Borrelli Family Rhode Island USA Please request permission to use the photos in the
 project by contacting the Borrelli Family. Thanks!
 
-ALL CODE IS FREE OF CHARGE UNDER THE MIT LICENSE:
+!!! NOTE !!! ALL CODE IS FREE OF CHARGE UNDER THE MIT LICENSE EXCEPT FOR THE "LOGO" SVG:
 
-The MIT License (MIT)
+Please feel free to explore the inner workings of the animated logo file in
+the ./src/util/icons/svgs/logo.js file but please be aware that the logo is
+under the copyright of its original owner in its full component form ( file included )
+This file is the only "code" in the project that is protected under (c) copyright of its owner.
+
+!!! NOTE !!!
+
+Please feel free to pick apart the project and use in any fashion you wish, but not the website as a whole
+in its full design, as the layout design is owned by the client, this will be considered copyright infringment on 
+Borrelli's Bakery.
+
+( CODE ONLY ) The MIT License (MIT)
 
 Copyright (c) 2015 gatsbyjs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
+of this software and associated documentation files (the "Software" other than
+the logo.js file located in ./src/util/icons/svgs/logo.js ), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
