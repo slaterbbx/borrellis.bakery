@@ -1,9 +1,8 @@
 import React from 'react'
 import * as Styles from './navigationButtons-styles'
-import Icon from '../../util/icons/icons'
 import {Link} from 'gatsby'
 
-const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isHomePage, infoButtonState}) => {
+const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isHomePage, infoButtonState, Icon}) => {
 	
 	let homeButton = (
 		<Link to="/" >

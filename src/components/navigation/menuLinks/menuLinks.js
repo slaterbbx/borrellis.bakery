@@ -2,9 +2,7 @@ import React from 'react'
 import { LinkWrapper, LinkIcon, Wrapper, ListWrapper } from './menuLinks-styles'
 import { Link } from 'gatsby'
 
-import Icon from '../../../util/icons/icons'
-
-const MenuContent = ({clicked}) => {
+const MenuContent = ({clicked, Icon}) => {
 	
 	// Generats the link list item with the name of the page
 	const linkGenerator = (linkAddress) => {
