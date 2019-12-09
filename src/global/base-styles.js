@@ -5,30 +5,51 @@ const GlobalStyle = createGlobalStyle`
 
     *,
     *::after,
-    *::before {
+    *::before{
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 		}
 
-    html {
-    font-size: 62.5%;
+		button{
+			border: none;
+			background-color: transparent;
+
+			:focus{
+				outline: 0;
+			}
+		}
+
+		button,
+		select{ /* 1 */
+			text-transform: none;
+		}
+
+		button,
+		[type="button"],
+		[type="reset"],
+		[type="submit"] {
+			-webkit-appearance: button;
+		}
+
+    html{
+    	font-size: 62.5%;
     }
 
-    body {
-    box-sizing: border-box;
-    background-color: black;
-    font-family: ${({ theme }) => theme.fontSecondary};
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colorDarkGrey};
+    body{
+			box-sizing: border-box;
+			background-color: black;
+			font-family: ${({ theme }) => theme.fontSecondary};
+			font-size: 2rem;
+			color: ${({ theme }) => theme.colorDarkGrey};
 
-    a {
-        color: ${({ theme }) => theme.colorDarkGrey};
+    a{
+			color: ${({ theme }) => theme.colorDarkGrey};
 
-        :active,
-        :visited{
-            color: ${({ theme }) => theme.colorDarkerGrey};
-        }
+			:active,
+			:visited{
+				color: ${({ theme }) => theme.colorDarkerGrey};
+			}
     }
   
       h1, h2, h3, h4, h5, h6 {
@@ -38,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
-		::selection {
+		::selection{
 			background-color: ${({theme}) => theme.colorMedGrey};
 			color: ${({theme}) => theme.colorWhite};
 		}
