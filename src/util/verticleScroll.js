@@ -7,6 +7,7 @@ const ScrollableWrapper = styled.div`
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
+	margin-bottom: 10rem;
 
 	${({leftSide}) => leftSide && css`
 		direction: rtl;
@@ -37,6 +38,7 @@ const ScrollableWrapperFix = styled.div`
 	height: 100%;
 	/* fixes direction used to push scroll bar to left side of page on outer wrapper */
 	direction: ltr;
+	/* padding: 10rem; */
 `
 
 const VerticleScroll = ({children, leftSide}) => (
