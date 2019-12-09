@@ -33,8 +33,8 @@ const svgIcon = props => {
     `
   } else if (!props.styles) {
     propsStyles = css`
-      width: 2rem;
-      height: 2rem;
+      width: 100%;
+      height: 100%;
       fill: currentColor;
     `
   }
@@ -55,7 +55,8 @@ const svgIcon = props => {
       PropsName = Biscuits
       break
     case "bread":
-      PropsName = Bread
+			PropsName = Bread
+			viewBox = "0 0 32 32"
       break
     case "catering":
       PropsName = Catering
@@ -123,7 +124,7 @@ const svgIcon = props => {
     } else if (checkVbCount === 4) {
       viewBox = propsInput
     }
-  }
+	}
 
   return (
     <Icons viewBox={viewBox}>
