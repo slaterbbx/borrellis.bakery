@@ -1,7 +1,7 @@
 ## Borrelli's Bakery Website
 
 ## 🧐Client Website
-[![Build Status](https://travis-ci.com/slaterbbx/borrellis-bakery.svg?branch=master)](https://travis-ci.com/slaterbbx/borrellis-bakery)
+[![Build Status](https://travis-ci.org/slaterbbx/borrellis-bakery.svg?branch=master)](https://travis-ci.org/slaterbbx/borrellis-bakery)
 
 ![Gatsby Website 1](gitImages/image1.jpg)
 ![Gatsby Website 2](gitImages/image2.jpg)
