@@ -1,8 +1,6 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
 
-import Icon from '../../../util/icons/icons'
-
 const SocialWrapper = styled.div`
 	display: flex;
 	position: absolute;
@@ -33,7 +31,7 @@ export const SocialIcon = css`
 	filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.2));
 `
 
-const socialLinks = ()=> (
+const socialLinks = ({Icon})=> (
 	<SocialWrapper>
 		<div className="iconWrapper">
 			<Icon name="yelp" styles={SocialIcon}/>

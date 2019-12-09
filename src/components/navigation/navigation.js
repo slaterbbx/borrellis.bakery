@@ -56,7 +56,7 @@ const NavMenu = ({path}) => {
 					<GalleryWrapper active={state.menuButton}>
 						<GatsbyGallery gallery={gallery}/>
 					</GalleryWrapper>
-					<NavSocialLinks/>
+					<NavSocialLinks Icon={Icon}/>
         </div>
       </MenuWrapper>
     </>
