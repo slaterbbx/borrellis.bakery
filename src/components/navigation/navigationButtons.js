@@ -36,10 +36,10 @@ const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isH
 	return (
   <Styles.NavButtonWrapper>
     <Styles.NavButton active={active} inactive={inactive}>
-      <div className="button" onClick={clickedNavButton}>
+      <button className="button" onClick={clickedNavButton}>
         <span className="icon-x"></span>
         <span className="icon-x--lines"></span>
-      </div>
+      </button>
     </Styles.NavButton>
 
 		<Styles.HomeButtonWrapper>
