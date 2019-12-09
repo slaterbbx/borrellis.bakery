@@ -6,7 +6,7 @@ before_script:
   - npm install -g gatsby-cli
 script:
   - npm run build
-# deploy:
-#   provider: firebase
-#   token:
-#     secure: "$FIREBASE_TOKEN"
+deploy:
+  provider: firebase
+  token:
+    secure: "$FIREBASE_TOKEN"
