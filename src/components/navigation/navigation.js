@@ -12,12 +12,10 @@ import {GlobalDispatchContext, GlobalStateContext} from '../context/globalContex
 // Array of names of image files in the src/images folder used by a custom
 // built gallary being used in the navigation menu on desktop view
 const gallery = [
-	"treats",
-	"flour",
-	"bread",
-	"carrotCake",
-	"pizza",
-	"bakery"
+	"family1",
+	"family2",
+	"bakeryOld",
+	"family3"
 ]
 
 const NavMenu = ({path}) => {
