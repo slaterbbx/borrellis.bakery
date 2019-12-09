@@ -9,7 +9,7 @@ const Wholesale = ()=> {
 	return (
 		<>
 		<SEO title="Wholesale" />
-		<PageWrapper src='bread.jpg' tint={true} fadeAnim={true}>
+		<PageWrapper src='bg-seating.jpg' tint={true} fadeAnim={true}>
 			<p>
 				test
 			</p>
