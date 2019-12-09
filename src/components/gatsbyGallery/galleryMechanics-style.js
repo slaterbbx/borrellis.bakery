@@ -1,5 +1,14 @@
 import styled, { css } from "styled-components"
 
+// const fadeIn = keyframes`
+// 	0% {
+// 			opacity: .5;
+// 	}
+// 	100% {
+// 			opacity: .7;
+// 	}
+// `
+
 export const GalleryWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -19,7 +28,6 @@ export const ImageWrapper = styled.div`
 export const ArrowSharedStyles = css`
   width: 100%;
   margin-top: 2rem;
-  color: white;
   user-select: none;
 `
 export const ArrowRight = css`
@@ -36,7 +44,17 @@ export const ButtonsWrapper = styled.div`
 	.button{
 		transform: translateY(0);
 		width: 8rem;
-		cursor: pointer; 
+		cursor: pointer;
+		color: ${({theme}) => theme.colorWhite};
+		opacity: .7;
+
+		:focus{
+			color: ${({theme}) => theme.colorWhitePeach}
+		}
+
+		:active{
+			/* color: blue; */
+		}
 
 		&:not(:last-child) {
 			margin-right: 3rem;
@@ -50,7 +68,7 @@ export const ButtonsWrapper = styled.div`
 	.arrowWrapper > .button{
 		transition: all .2s ease;
 		transform: translateY(0);
-		opacity: .7;
+
 		&:hover {
 			opacity: 1;
     	transform: translateY(-.5rem);

@@ -35,14 +35,14 @@ const GalleryMechanics = ({children, gallery}) => {
 
       <ButtonsWrapper>
 				<div className="arrowWrapper">
-					<div className="button" onClick={ImageSelectorHandler.bind(null, "left")}>
+					<button className="button" onClick={ImageSelectorHandler.bind(null, "left")}>
 						<Icon name="arrowCircle" styles={ArrowLeft} />
-					</div>
+					</button>
 				</div>
 				<div className="arrowWrapper">
-					<div className="button" onClick={ImageSelectorHandler.bind(null, "right")}>
+					<button className="button" onClick={ImageSelectorHandler.bind(null, "right")}>
 						<Icon name="arrowCircle" styles={ArrowRight} />
-					</div>
+					</button>
 				</div>
       </ButtonsWrapper>
     </GalleryWrapper>
