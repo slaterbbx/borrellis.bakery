@@ -1,7 +1,9 @@
 // [ X ] FIX: home page background gradiant
-
 // [ X ] CREATE: Turn "about" wrapper and background into its own component for use on multiple pages 
 // [ X ] FIX: Solve issue with opacity on 'about' wrapper so that inner font ( solved with RGB ).
+
+// tabindex="-1" 
+// tabindex is an html a tag attribute that will remove the tabability of a tags, I can use this to remove that annoying tab glitch caused when the menu should be hidden and not accessable.
 
 // CREATE: Finish 404 page
 // CREATE: Menu page ( need contentBox mobile design first )
