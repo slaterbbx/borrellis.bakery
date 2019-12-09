@@ -48,10 +48,13 @@ const BackgroundSection = ({ className, src, tint, children }) => {
 }
 
 const DynamicImage = styled(BackgroundSection)`
+	position: relative;
   width: 100%;
   height: 100%;
   background-position: center;
-  background-size: cover;
+	background-size: cover;
+	background-repeat: repeat;
+
 
 	${({fadeAnim}) => fadeAnim && css`
 		animation: ${fadeIn} .5s ease-in;
