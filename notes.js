@@ -1,11 +1,13 @@
-// [ X ] FIX: home page background gradiant
-// [ X ] CREATE: Turn "about" wrapper and background into its own component for use on multiple pages 
-// [ X ] FIX: Solve issue with opacity on 'about' wrapper so that inner font ( solved with RGB ).
+// CLOUD FUNCTIONS
+// Capture POST from Prismic, convert data to own POST and send to Travis-ci for re-build and re-deployment
+
 
 // move infoButton on top of the nav menu and animate it.
-
 // tabindex="-1" 
-// tabindex is an html a tag attribute that will remove the tabability of a tags, I can use this to remove that annoying tab glitch caused when the menu should be hidden and not accessable.
+// tabindex is an html a tag attribute that will remove the tabability of a tags, I can use this to remove that annoying tab glitch caused when the menu should be hidden and not accessable when the menu is off of the screen.
+
+// convert gallery to use regular images with alt tag so that they are indexed in google.
+// Do the same conversion for contentBox systems images by creating a dynamic image loader like the dynamic image background loader, that has ( img{object-fit: cover} in the css )
 
 // CREATE: Finish 404 page
 // CREATE: Menu page ( need contentBox mobile design first )
@@ -17,3 +19,7 @@
 // CAN START MOBILE ON
 // contentBox ( needed prior to Menu page )
 // Menu
+
+// Make logo flicker ( more like fire )
+
+// ADD AMP
