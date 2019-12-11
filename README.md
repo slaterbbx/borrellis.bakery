@@ -48,7 +48,7 @@ Check out the `.travis.yml` in the ./root directory of the project. Here you wil
 #### Pipedream.com custom workflow / travis-ci re-build trigger on prismic.io content changes:
 > Fires a Webhook POST request from prismic backend to Pipedream which trigger a POST request to Travis-ci to trigger a rebuild.  
 
-Pipedream workflow at the following link. Please note that the Authorization header value is hidden. You need to first generate ( requires installing travis CLI and Ruby on rails ) or you can get a token from your user settings page when logged into travic-ci.com and the value for Authorization should be ( token YOUR_TOKEN_HERE )  
+Pipedream workflow at the following link. Please note that the Authorization header value is hidden. You need to first generate ( requires installing travis CLI and Ruby ) or you can get a token from your user settings page when logged into travic-ci.com and the value for Authorization should be ( token YOUR_TOKEN_HERE )  
 [Pipedream example workflow](https://pipedream.com/@borrellisbakery/prismic-build-p_PACreJ)
 
 ### 🎓 Framework details
