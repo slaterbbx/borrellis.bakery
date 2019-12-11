@@ -1,9 +1,11 @@
-// move infoButton on top of the nav menu and animate it.
+// gallery buttens when menuButton false need tabIndex
 // tabindex="-1" 
 // tabindex is an html a tag attribute that will remove the tabability of a tags, I can use this to remove that annoying tab glitch caused when the menu should be hidden and not accessable when the menu is off of the screen.
 
 // convert gallery to use regular images with alt tag so that they are indexed in google.
 // Do the same conversion for contentBox systems images by creating a dynamic image loader like the dynamic image background loader, that has ( img{object-fit: cover} in the css )
+
+// --------------------------------------------------
 
 // CREATE: Finish 404 page
 // CREATE: Menu page ( need contentBox mobile design first )
