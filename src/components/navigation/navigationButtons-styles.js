@@ -143,7 +143,7 @@ export const HomeButtonWrapper = styled.div`
 	position: relative;
 	width: 100%;
 
-	z-index: 2;
+	z-index: 4;
 `
 
 export const HomeButton = styled.div`
@@ -154,19 +154,26 @@ export const HomeButton = styled.div`
 	transition: all .6s ease;
 	transform: translateX(0);
 
-	height: 7rem;
-	z-index: 3;
+	margin-top: 1rem;
 
 	${({active}) => active && css`
 			transform: translateX(200%);
 	`}
 `
-
-export const Icon = css`
+const iconSharedStyles = css`
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
   width: 4rem;
   color: ${({ theme }) => theme.colorWhite};
+`
+
+export const IconHome = css`
+	${iconSharedStyles}
+	margin-top: .2rem;
+`
+
+export const IconInfo = css`
+	${iconSharedStyles}
 `

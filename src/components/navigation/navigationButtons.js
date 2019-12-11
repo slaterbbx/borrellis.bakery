@@ -1,53 +1,70 @@
-import React from 'react'
-import * as Styles from './navigationButtons-styles'
-import {Link} from 'gatsby'
+import React, { useContext } from 'react'
+import { NavButtonWrapper, NavButton, HomeButtonWrapper, HomeButton, IconInfo, IconHome } from './navigationButtons-styles'
+import { navigate } from 'gatsby'
+
+import { GlobalStateContext } from '../../components/context/globalContext'
 
 const Navigation = ({ clickedNavButton, clickedInfoButton, active, inactive, isHomePage, infoButtonState, Icon}) => {
 	
+	const state = useContext(GlobalStateContext);
+
+	// due to the complexity of the menu navigation functionality and design, we need to
+	// determine if we are triggering either button to set set off the subscript to the global
+	// context and make the appropriate changes
+	const buttonSpecificityHandler = (buttonType) => {
+		if( buttonType === 'home' && state.isHomePage === false ){
+			clickedInfoButton();
+			navigate("/");
+		}else if ( buttonType === 'home' && state.isHomePage === true ){
+			clickedInfoButton();
+		}
+		clickedInfoButton();
+	}
+
 	let homeButton = (
-		<Link to="/" >
-			<Styles.HomeButton active={false}>
-				<Icon name="home" styles={Styles.Icon} viewbox="0 0 42 32" />
-			</Styles.HomeButton>
-		</Link>
+		<button onClick={buttonSpecificityHandler.bind(null, 'home')}>
+			<HomeButton active={false}>
+				<Icon name="home" styles={IconHome} viewbox="0 0 42 32" />
+			</HomeButton>
+		</button>
 	);
 
 	let infoButton = (
-		<Styles.HomeButton onClick={clickedInfoButton} active={true}>
-			<Icon name="about" styles={Styles.Icon} viewbox="0 0 32 32"/>
-		</Styles.HomeButton>
+		<HomeButton onClick={buttonSpecificityHandler.bind(null, 'info')} active={true}>
+			<Icon name="about" styles={IconInfo} viewbox="0 0 32 32"/>
+		</HomeButton>
 	);
 	
 	if ( isHomePage === true){
 		homeButton = (
-			<Link to="/" >
-				<Styles.HomeButton onClick={clickedInfoButton} active={!infoButtonState}>
-					<Icon name="home" styles={Styles.Icon} viewbox="0 0 42 32" />
-				</Styles.HomeButton>
-			</Link>
+			<button onClick={buttonSpecificityHandler.bind(null, 'home')}>
+				<HomeButton onClick={clickedInfoButton} active={!infoButtonState}>
+					<Icon name="home" styles={IconHome} viewbox="0 0 42 32" />
+				</HomeButton>
+			</button>
 		);
 		infoButton = (
-			<Styles.HomeButton onClick={clickedInfoButton} active={infoButtonState}>
-				<Icon name="about" styles={Styles.Icon} viewbox="0 0 32 32"/>
-			</Styles.HomeButton>
+			<HomeButton onClick={buttonSpecificityHandler.bind(null, 'info')} active={infoButtonState}>
+				<Icon name="about" styles={IconInfo} viewbox="0 0 32 32"/>
+			</HomeButton>
 		);
 	}
 
 	return (
-  <Styles.NavButtonWrapper>
-    <Styles.NavButton active={active} inactive={inactive}>
+  <NavButtonWrapper>
+    <NavButton active={active} inactive={inactive}>
       <button className="button" onClick={clickedNavButton}>
         <span className="icon-x"></span>
         <span className="icon-x--lines"></span>
       </button>
-    </Styles.NavButton>
+    </NavButton>
 
-		<Styles.HomeButtonWrapper>
+		<HomeButtonWrapper>
 			{homeButton}
 			{infoButton}
-		</Styles.HomeButtonWrapper>
+		</HomeButtonWrapper>
 
-  </Styles.NavButtonWrapper>
+  </NavButtonWrapper>
 	)
 }
 
