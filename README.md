@@ -41,7 +41,7 @@ These are the resources to help you understand how the CI / CD rebuild pipeline 
 [gatsbyjs.org](https://www.gatsbyjs.org/)
 
 #### CI / CD with travis-ci
-Check out the `.travis.yml' in the ./root directory of the project. Here you will see how we are building and deploying from travis-ci to firebase webhosting. Most of the comments like `# - cd functions && npm install` are in regards to if you need to also deploy firebase functions with your project. 
+Check out the `.travis.yml` in the ./root directory of the project. Here you will see how we are building and deploying from travis-ci to firebase webhosting. Most of the comments like `# - cd functions && npm install` are in regards to if you need to also deploy firebase functions with your project. 
 **NOTE:** With this type of deployment it is advised to turn off "Build pushed pull request" in your travis-ci project settings on a public repository, since this will cause your site to build and deploy others changes to firebase hosting.  
 [Builds on travis](https://travis-ci.com/slaterbbx/borrellis-bakery)
 
