@@ -8,17 +8,20 @@ before_script:
   # - cd functions && npm install
   # - cd ../
 script:
-  # Clear any old cache. from gatsby via old build ( Know issue with the cache files )
+  # // COMMMENT: Clear any old cache. from gatsby via old build ( Know issue with the cache files )
   - npm run clean
   - npm run build
   - firebase deploy --only hosting --token "$FIREBASE_TOKEN"
-  # - firebase deploy --only hosting,functions --token "$FIREBASE_TOKEN"
 branches:
   only:
     - master
+########
+## Use this script if you need to build and deploy firebase functions as well
+########
+# - firebase deploy --only hosting,functions --token "$FIREBASE_TOKEN"
 
 ########
-# I have found the Travis CI deployment provider is basically no good
+# I have found the Travis CI deployment provider is basically no good so we go script driven deployment
 #######
 # deploy:
 #   provider: firebase
