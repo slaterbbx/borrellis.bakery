@@ -1,4 +1,0 @@
-# Configuration for Repo Lockdown - https://github.com/dessant/repo-lockdown
-
-# Lock issues and pull requests
-lock: true
