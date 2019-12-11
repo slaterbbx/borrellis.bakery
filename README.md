@@ -10,7 +10,7 @@ The main focus of this project was to build a highly efficient, fast, reliable a
 	- Note: This will be added soon
 - Firebase ( Hosting and automated deployment using Travis-ci and a webhook from prismic.io)
 - Continous integration
-	- Re-build and deployment on master codebranch updates or pull request
+	- Re-build and deployment on master codebranch updates or pull request ( only if accepted and merged with master )
 - Continous deployment
 - Automated static website re-build and deployment
 	- CDN content managment backend hosted by prismic.io ( graphQL )
