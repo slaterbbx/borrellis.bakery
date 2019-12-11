@@ -31,28 +31,29 @@ The main focus of this project was to build a highly efficient, fast, reliable a
 - Styled-components 💅 for the **WIN**
 
 ## 🏃‍♂️ View live work in progress
-https://borrellis-bakery.web.app/
+[Live demo of current work in progress link](https://borrellis-bakery.web.app/)
 
 ## 😎 View Figma Template / Design files
-https://www.figma.com/file/FD0kSXJ4qs0LyWuUXHYfjJ6m/Borrelli-s-Bakery?node-id=0%3A1
+[Figma design link](https://www.figma.com/file/FD0kSXJ4qs0LyWuUXHYfjJ6m/Borrelli-s-Bakery?node-id=0%3A1)
 
-### 🎓 Resources
+## 🎓 Resources
 These are the resources to help you understand how the CI / CD rebuild pipeline is being handled.  
-https://www.gatsbyjs.org/ 
+[gatsby link](https://www.gatsbyjs.org/ )
 
-## CI / CD with travis-ci
+
+# CI / CD with travis-ci
 Check out the `.travis.yml' in the ./root directory of the project. Here you will see how we are building and deploying from travis-ci to firebase webhosting. Most of the comments like `# - cd functions && npm install` are in regards to if you need to also deploy firebase functions with your project. 
 **NOTE:** With this type of deployment it is advised to turn off "Build pushed pull request" in your travis-ci project settings on a public repository, since this will cause your site to build and deploy others changes to firebase hosting.  
-https://travis-ci.com/slaterbbx/borrellis-bakery
+[CI / CD workflow link](https://travis-ci.com/slaterbbx/borrellis-bakery)
 
 # Pipedream.com custom workflow / travis-ci re-build build trigger:
 > Fires a Webhook POST request from prismic backend to Pipedream which trigger a POST request to Travis-ci to trigger a rebuild.
 Pipedream workflow at the following link. Please note that the Authorization header value is hidden. You need to first generate ( requires installing travis CLI and Ruby on rails ) or you can get a token from your user settings page when logged into travic-ci.com and the value for Authorization should be ( token YOUR_TOKEN_HERE )
-https://pipedream.com/@borrellisbakery/prismic-build-p_PACreJ 
+[CI / CD workflow tools link](https://pipedream.com/@borrellisbakery/prismic-build-p_PACreJ)
 
 ## 🎓 Framework details
 Website built in react bootstrapped by gatsby.js
-https://www.gatsbyjs.org/
+[More info on gatsby js](https://www.gatsbyjs.org/)
 
 ## 💫 W.I.P.
 This project is a current work in progress.
