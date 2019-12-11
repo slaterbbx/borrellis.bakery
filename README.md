@@ -30,10 +30,10 @@ The main focus of this project was to build a highly efficient, fast, reliable a
 - Minimal dependancies ( all page transitions are coded within the project )
 - Styled-components 💅 for the **WIN**
 
-### 🏃‍♂️ View live work in progress
+### View live work in progress
 [Live demo of current work in progress](https://borrellis-bakery.web.app/)
 
-### 😎 View Figma Template / Design files
+### View Figma Template / Design files
 [Figma design preview](https://www.figma.com/file/FD0kSXJ4qs0LyWuUXHYfjJ6m/Borrelli-s-Bakery?node-id=0%3A1)
 
 ### 🎓 Resources
@@ -45,7 +45,7 @@ Check out the `.travis.yml' in the ./root directory of the project. Here you wil
 **NOTE:** With this type of deployment it is advised to turn off "Build pushed pull request" in your travis-ci project settings on a public repository, since this will cause your site to build and deploy others changes to firebase hosting.  
 [Builds on travis](https://travis-ci.com/slaterbbx/borrellis-bakery)
 
-#### Pipedream.com custom workflow / travis-ci re-build build trigger:
+#### Pipedream.com custom workflow / travis-ci re-build trigger on prismic.io content changes:
 > Fires a Webhook POST request from prismic backend to Pipedream which trigger a POST request to Travis-ci to trigger a rebuild.  
 
 Pipedream workflow at the following link. Please note that the Authorization header value is hidden. You need to first generate ( requires installing travis CLI and Ruby on rails ) or you can get a token from your user settings page when logged into travic-ci.com and the value for Authorization should be ( token YOUR_TOKEN_HERE )  
