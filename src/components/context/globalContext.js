@@ -17,9 +17,18 @@ const reducer = (state, action) => {
 				menuButton: !state.menuButton
 			}
 		case "INFO_BUTTON":
-			return {
-				...state,
-				infoButton: !state.infoButton
+			console.log(state.menuButton)
+			if ( state.menuButton === true ){
+				return {
+					...state,
+					menuButton: !state.menuButton,
+					infoButton: !state.infoButton
+				}
+			} else {
+				return {
+					...state,
+					infoButton: !state.infoButton
+				}
 			}
 		case "IS_HOME":
 			return {
