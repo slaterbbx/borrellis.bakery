@@ -7,7 +7,6 @@ The main focus of this project was to build a highly efficient, fast, reliable a
 - **JAM** stack
 - Gatsby.js ( speed )
 - Prismic.io CMS ( content managment and deliver method for build time using graphQl endpoint )
-	- Note: This will be added soon
 - Firebase ( Hosting and automated deployment using Travis-ci and a webhook from prismic.io)
 - Continous integration
 	- Re-build and deployment on master codebranch updates or pull request, only if accepted and merged with master
