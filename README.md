@@ -3,31 +3,27 @@
 ## 💯 Borrelli's Bakery Website
 The main focus of this project was to build a highly efficient, fast, reliable and future proof website for the client. We needed some method to manage some ever chainging content, ie. products and descriptions. SEO was imperitive due to the nature of the company and its target demographic. The choice was made to go with a JAM stack build that is automatically re-built upon changes in the chosen CMS platform. I chose prismic due to its simple user interface / graphQL endpoint and ability to send out a webhook upon publishing. Prismic is also a CDN ( content delivery network ) but for this project that really does not matter to us. We will only be loading content from prismic during re-build time, saving all images and data locally so that we serve up a static website 100% of the time to our visitors while still getting the benifits of a CMS type management system for our website content. Firebase was chosen for the hosting mainly because it provides the needed options to expand to a custom client user portal and backend later with firebase database and firebase functions. Travis-CI for CI / CD due to its simplicity and integration with gitHub. Pipedream is used to catch the webhook from prismic and then send a newly formatted HTTP POST request to Travis-CI to trigger a rebuild upon CMS backend changes.
 
-## 💪 Project outline details ( some things are still being added )
-- **JAM** stack
-- Gatsby.js ( speed )
-- Prismic.io CMS ( content managment and deliver method for build time using graphQl endpoint )
-- Firebase ( Hosting and automated deployment using Travis-ci and a webhook from prismic.io)
-- Continous integration
-	- Re-build and deployment on master codebranch updates or pull request, only if accepted and merged with master
-- Continous deployment
-- Automated static website re-build and deployment
+## 💪 Project outline details
+- **JAM stack**
+- Gatsby.js ( React )
+- Prismic.io / Headless CMS / Content Deliver Network
+- Firebase Webhosting
+- Continous integration / Continous deployment
 	- CDN content managment backend hosted by prismic.io ( graphQL )
-  	* Data is downloaded from the CDN on build time only and built locally on deployment
-		* Photos are hosted on the CDN
-		* No missing data from search engine crawlers
+		* Webhook based rebuild using Travis CI
+    * Choose specific data to be imbedded into the html on build time
+		* No missing data from search engine crawlers ( local html and copy content )
+		* Photos are hosted on the CDN for faster load times
 		* Optimal design for SEO and performance
 - Context based global state management
-- Multi page app with a SPA feel
-- Modern hook based react design
-- Strong UI / UX focus
-- Strong focus on optimization
+- Modern hook-based react design
 - User accessability best practices
 	- Mobile first ( not yet converted )
 	- Proper Tabbable navigation ( still work in progress )
-	- Rem based global scaling for Zoom / based on browser default font size
+	- Rem based global scaling for Zoom and font | % based default font size
 	- Em based media breakpoints
-- Minimal dependancies ( all page transitions are coded within the project )
+	  - View ./src/util/mediaQuery.js for more info
+- Minimal dependancies
 - Styled-components 💅 for the **WIN**
 
 ### View live work in progress
