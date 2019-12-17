@@ -14,7 +14,8 @@ The main focus of this project was to build a highly efficient, fast, reliable a
 - Continous deployment
 - Automated static website re-build and deployment
 	- CDN content managment backend hosted by prismic.io ( graphQL )
-  	* Data is downloaded from the CDN on build time only and served locally on deployment
+  	* Data is downloaded from the CDN on build time only and built locally on deployment
+		* Photos are hosted on the CDN
 		* No missing data from search engine crawlers
 		* Optimal design for SEO and performance
 - Context based global state management
