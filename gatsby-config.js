@@ -8,6 +8,12 @@ module.exports = {
     author: `Lit on fire design`,
   },
   plugins: [
+		{
+			resolve: 'gatsby-source-prismic-graphql',
+			options: {
+				repositoryName: repo[1], // Loads the repo name from prismic configuration
+			}
+		},
 		`gatsby-plugin-layout`,
     {
 			resolve: `gatsby-plugin-styled-components`,
@@ -37,11 +43,5 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
 		},
-		{
-			resolve: 'gatsby-source-prismic-graphql',
-			options: {
-				repositoryName: repo[1], // Loads the repo name from prismic configuration
-			}
-		}
   ],
 }
