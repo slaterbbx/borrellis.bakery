@@ -1,3 +1,6 @@
+const { apiEndpoint } = require('./prismic-config');
+var repo = /([^\/]+)\.prismic\.io\/graphql/.exec(apiEndpoint);
+
 module.exports = {
   siteMetadata: {
     title: `Borrelli's Bakery Website`,
@@ -29,14 +32,16 @@ module.exports = {
 				name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
 		},
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+		{
+			resolve: 'gatsby-source-prismic-graphql',
+			options: {
+				repositoryName: repo[1], // Loads the repo name from prismic configuration
+			}
+		}
   ],
 }
