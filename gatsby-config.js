@@ -1,5 +1,5 @@
-const { apiEndpoint } = require('./prismic-config');
-var repo = /([^\/]+)\.prismic\.io\/graphql/.exec(apiEndpoint);
+// const { apiEndpoint } = require('./prismic-config');
+// var repo = /([^\/]+)\.prismic\.io\/graphql/.exec(apiEndpoint);
 
 module.exports = {
   siteMetadata: {
@@ -8,12 +8,12 @@ module.exports = {
     author: `Lit on fire design`,
   },
   plugins: [
-		{
-			resolve: 'gatsby-source-prismic-graphql',
-			options: {
-				repositoryName: repo[1], // Loads the repo name from prismic configuration
-			}
-		},
+		// {
+		// 	resolve: 'gatsby-source-prismic-graphql',
+		// 	options: {
+		// 		repositoryName: repo[1], // Loads the repo name from prismic configuration
+		// 	}
+		// },
 		`gatsby-plugin-layout`,
     {
 			resolve: `gatsby-plugin-styled-components`,

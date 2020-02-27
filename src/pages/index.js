@@ -27,13 +27,13 @@ const IndexPage = () => {
 		dispatch({type: 'IS_HOME', payload: true});
 
 		// We cleanup and change the isHomePage state to false so that we can display the proper navigation options on every other page of the website.
-		return function cleanup(){
+		return function cleanup(){ 
 			dispatch({type: 'IS_HOME', payload: false});
 		}
 		// eslint-disable-next-line
 	},[])
-
-  return (
+ 
+  return ( 
 		<>
     <SEO title="Home" />
     <PageWrapper src="bg-display.jpg" tint={true} fadeAnim={true}>
@@ -59,5 +59,4 @@ const IndexPage = () => {
 		</>
   )
 }
-
 export default IndexPage
