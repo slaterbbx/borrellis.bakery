@@ -1,6 +1,3 @@
-// const { apiEndpoint } = require('./prismic-config');
-// var repo = /([^\/]+)\.prismic\.io\/graphql/.exec(apiEndpoint);
-
 module.exports = {
   siteMetadata: {
     title: `Borrelli's Bakery Website`,
@@ -8,12 +5,23 @@ module.exports = {
     author: `Lit on fire design`,
   },
   plugins: [
-		// {
-		// 	resolve: 'gatsby-source-prismic-graphql',
-		// 	options: {
-		// 		repositoryName: repo[1], // Loads the repo name from prismic configuration
-		// 	}
-		// },
+		{
+			resolve: 'gatsby-source-prismic',
+			options: {
+				repositoryName: 'borrellis-bakery',
+				accessToken: process.env.PRISMIC_TOKEN,
+				schemas: {
+					biscuits: require('./prismic/schemas/biscuits.json'),
+					breads: require('./prismic/schemas/breads.json'),
+					cakes: require('./prismic/schemas/cakes.json'),
+					pastries: require('./prismic/schemas/pastries.json'),
+					pies: require('./prismic/schemas/pies.json'),
+					pizza: require('./prismic/schemas/pizza.json'),
+					seasonal: require('./prismic/schemas/seasonal.json'),
+					specialty: require('./prismic/schemas/specialty.json'), 
+				}
+			},
+		},
 		`gatsby-plugin-layout`,
     {
 			resolve: `gatsby-plugin-styled-components`,
