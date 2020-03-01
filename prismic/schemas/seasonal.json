@@ -1,0 +1,48 @@
+{
+  "Main" : {
+    "type" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Holiday Specials" ],
+        "default_value" : "Holiday Specials",
+        "label" : "type"
+      }
+    },
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "name",
+        "placeholder" : "Seasonal Item Name"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "allowTargetBlank" : true,
+        "label" : "description",
+        "placeholder" : "Seasonal Item Description"
+      }
+    },
+    "photo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1300,
+          "height" : 780
+        },
+        "thumbnails" : [ ],
+        "label" : "photo"
+      }
+    },
+    "resale" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Wholesale", "Catering", "Wholesale & Catering" ],
+        "label" : "resale",
+        "placeholder" : "Sale Options"
+      }
+    }
+  }
+}

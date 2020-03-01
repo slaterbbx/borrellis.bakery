@@ -1,0 +1,49 @@
+{
+  "Main" : {
+    "type" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Party Pizza", "Pizza Chips" ],
+        "default_value" : "Party Pizza",
+        "label" : "type",
+        "placeholder" : "Pizza Type"
+      }
+    },
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "name",
+        "placeholder" : "Pizza Name"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "allowTargetBlank" : true,
+        "label" : "description",
+        "placeholder" : "Pizza Description"
+      }
+    },
+    "photo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1300,
+          "height" : 780
+        },
+        "thumbnails" : [ ],
+        "label" : "photo"
+      }
+    },
+    "resale" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Wholesale", "Catering", "Wholesale & Catering" ],
+        "label" : "resale",
+        "placeholder" : "Sale Options"
+      }
+    }
+  }
+}

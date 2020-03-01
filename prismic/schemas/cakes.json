@@ -1,0 +1,49 @@
+{
+  "Main" : {
+    "type" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Assorted Cakes", "Cheesecake" ],
+        "default_value" : "Assorted Cakes",
+        "label" : "type",
+        "placeholder" : "Cake type"
+      }
+    },
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "name",
+        "placeholder" : "Cake Name"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "allowTargetBlank" : true,
+        "label" : "description",
+        "placeholder" : "Cake Description"
+      }
+    },
+    "photo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1300,
+          "height" : 780
+        },
+        "thumbnails" : [ ],
+        "label" : "photo"
+      }
+    },
+    "resale" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Wholesale", "Catering", "Wholesale & Catering" ],
+        "label" : "resale",
+        "placeholder" : "Sale Options"
+      }
+    }
+  }
+}

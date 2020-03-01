@@ -1,0 +1,49 @@
+{
+  "Main" : {
+    "type" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Delicious & Fresh" ],
+        "default_value" : "Delicious & Fresh",
+        "label" : "type",
+        "placeholder" : "Biscuit Type"
+      }
+    },
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "name",
+        "placeholder" : "Biscuit Name"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "allowTargetBlank" : true,
+        "label" : "description",
+        "placeholder" : "Biscuit Description"
+      }
+    },
+    "photo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1300,
+          "height" : 780
+        },
+        "thumbnails" : [ ],
+        "label" : "photo"
+      }
+    },
+    "resale" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ ],
+        "label" : "resale",
+        "placeholder" : "Sale Options"
+      }
+    }
+  }
+}

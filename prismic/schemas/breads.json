@@ -1,0 +1,49 @@
+{
+  "Main" : {
+    "type" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Italian / French", "Rolls" ],
+        "default_value" : "Italian / French",
+        "label" : "type",
+        "placeholder" : "Bread Type"
+      }
+    },
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "name",
+        "placeholder" : "Bread Name"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "allowTargetBlank" : true,
+        "label" : "description",
+        "placeholder" : "Bread Description"
+      }
+    },
+    "photo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1300,
+          "height" : 780
+        },
+        "thumbnails" : [ ],
+        "label" : "photo"
+      }
+    },
+    "resale" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Wholesale", "Catering", "Wholesale & Catering" ],
+        "label" : "resale",
+        "placeholder" : "Sale Options"
+      }
+    }
+  }
+}
