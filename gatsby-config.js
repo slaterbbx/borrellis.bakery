@@ -10,6 +10,10 @@ module.exports = {
 			options: {
 				repositoryName: 'borrellis-bakery',
 				accessToken: process.env.PRISMIC_TOKEN,
+				linkResolver: ({ node, key, value }) => doc => {
+					// Homepage route fallback
+  				return '/';
+				},
 				schemas: {
 					biscuits: require('./prismic/schemas/biscuits.json'),
 					breads: require('./prismic/schemas/breads.json'),
@@ -19,7 +23,11 @@ module.exports = {
 					pizza: require('./prismic/schemas/pizza.json'),
 					seasonal: require('./prismic/schemas/seasonal.json'),
 					specialty: require('./prismic/schemas/specialty.json'), 
-				}
+				},
+				lang: '*',
+				shouldDownloadImage: ({ node, key, value }) => {
+					return true;
+				},
 			},
 		},
 		`gatsby-plugin-layout`,
