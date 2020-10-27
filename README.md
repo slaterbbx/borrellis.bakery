@@ -48,11 +48,9 @@ Check out the `.travis.yml` in the ./root directory of the project. Here you wil
 **NOTE:** Environment variables are stored on travis-ci.com by going to settings on your project but one variable must be on both your local machine and travic-ci and that is the variable $PRISMIC_TOKEN  
 
 #### Pipedream.com custom workflow / travis-ci re-build trigger on prismic.io content changes:
-<<<<<<< HEAD
 > Fires a Webhook POST request from prismic backend to Pipedream which trigger a POST request to Travis-ci to trigger a rebuild and deployment to firebase hosting. 
-=======
+
 > A Webhook POST request is fired from prismic to Pipedream which triggers a custom formatted POST request to Travis-ci to trigger a rebuild and deployment to firebase hosting.  
->>>>>>> 632ccea2d3b337c59a8dd51052c2f2c7fc4833eb
 
 Pipedream workflow at the following link. Please note that the Authorization header value is hidden. You need to first generate ( requires installing travis CLI and Ruby ) or you can get a token from your user settings page when logged into travic-ci.com and the value for Authorization value on pipedream should be ( token YOUR_TOKEN_HERE )  
 https://pipedream.com/@borrellisbakery/prismic-build-p_PACreJ
