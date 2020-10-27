@@ -13,7 +13,7 @@ const BackgroundSectionImage = ({ className, src, children }) => {
             relativePath
             childImageSharp {
               fluid(maxWidth: 1920) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid 
               }
             }
           }
