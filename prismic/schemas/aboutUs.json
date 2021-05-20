@@ -1,0 +1,28 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "title",
+        "placeholder" : "About Borrelli's"
+      }
+    },
+    "photo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "photo"
+      }
+    },
+    "copy" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "allowTargetBlank" : true,
+        "label" : "copy"
+      }
+    }
+  }
+}
