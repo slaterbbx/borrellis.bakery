@@ -5,8 +5,7 @@ export const ComponentVerticleCenter = styled.div`
     active &&
 		css`
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
+			align-items: center;
 			height: 100%;
     `}
 `
@@ -19,8 +18,8 @@ export const ComponentWrapper = styled.div`
 	width: 100%;
 
 	/*  TURN THIS OFF!!!  */
-	margin-bottom: 5rem;
-	margin-top: 5rem;
+	/* margin-bottom: 5rem;
+	margin-top: 5rem; */
 `
 
 export const BoxWrapper = styled.div`
