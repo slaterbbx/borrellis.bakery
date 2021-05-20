@@ -15,6 +15,7 @@ module.exports = {
   				return '/';
 				},
 				schemas: {
+					aboutUs: require('./prismic/schemas/aboutUs.json'),
 					biscuits: require('./prismic/schemas/biscuits.json'),
 					breads: require('./prismic/schemas/breads.json'),
 					cakes: require('./prismic/schemas/cakes.json'),
@@ -35,6 +36,7 @@ module.exports = {
 			resolve: `gatsby-plugin-styled-components`,
       options: {
 				// Use this during production to shorten class names in styled-components
+				// Find a way to trigger this automatically
         // displayName: false
       },
     },
@@ -43,7 +45,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
       options: {
 				name: `images`,
-        path: `${__dirname}/src/images`,
+				path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
