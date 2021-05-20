@@ -23,7 +23,7 @@ export const InfoWrapper = styled.div`
 	height: 100%;
 	opacity: 1;
 
-  z-index: 0;
+  z-index: 2;
 
 	${({ active }) =>
     active &&
